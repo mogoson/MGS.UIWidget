@@ -49,12 +49,12 @@ namespace Developer.Tooltip
             textUI = GetComponent<Text>();
             csFitter = GetComponent<ContentSizeFitter>();
             bgRect = transform.GetChild(0).GetComponent<RectTransform>();
-        }//Reset()_end
+        }
 
         protected virtual void Update()
         {
             SetPosition(Input.mousePosition);
-        }//Update()_end
+        }
 
         /// <summary>
         /// Set tooltip UI screen position.
@@ -68,7 +68,7 @@ namespace Developer.Tooltip
             var newX = pointerPos.x < Screen.width - bgRect.rect.width ? pointerPos.x + halfWidth : Screen.width - halfWidth;
             var newY = pointerPos.y < Screen.height - bgRect.rect.height ? pointerPos.y + halfHeight : Screen.height - halfHeight;
             transform.position = new Vector2(newX, newY);
-        }//SetP...()_end
+        }
         #endregion
 
         #region Public Method
@@ -82,7 +82,7 @@ namespace Developer.Tooltip
             gameObject.SetActive(true);
             csFitter.SetLayoutHorizontal();
             csFitter.SetLayoutVertical();
-        }//Show()_end
+        }
 
         /// <summary>
         /// Close tooltip UI.
@@ -90,7 +90,7 @@ namespace Developer.Tooltip
         public virtual void Close()
         {
             gameObject.SetActive(false);
-        }//Close()_end
+        }
         #endregion
-    }//class_end
-}//namespace_end
+    }
+}

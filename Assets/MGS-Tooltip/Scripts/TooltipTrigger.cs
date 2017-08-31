@@ -42,17 +42,17 @@ namespace Developer.Tooltip
         protected virtual void Reset()
         {
             UI = FindObjectOfType<TooltipUI>();
-        }//Reset()_end
+        }
 
         protected virtual void OnMouseEnter()
         {
             UI.Show(text);
-        }//OnM...()_end
+        }
 
         protected virtual void OnMouseExit()
         {
             UI.Close();
-        }//OnM...()_end
+        }
         #endregion
-    }//class_end
-}//namespace_end
+    }
+}
