@@ -1,7 +1,7 @@
 /*************************************************************************
- *  Copyright (C), 2017-2018, Mogoson tech. Co., Ltd.
+ *  Copyright (C), 2017-2018, Mogoson Tech. Co., Ltd.
  *  FileName: TooltipUI.cs
- *  Author: Mogoson   Version: 1.0   Date: 6/13/2017
+ *  Author: Mogoson   Version: 0.1.0   Date: 6/13/2017
  *  Version Description:
  *    Internal develop version,mainly to achieve its function.
  *  File Description:
@@ -14,15 +14,15 @@
  *     1.
  *  History:
  *    <ID>    <author>      <time>      <version>      <description>
- *     1.     Mogoson     6/13/2017       1.0        Build this file.
+ *     1.     Mogoson     6/13/2017       0.1.0       Create this file.
  *************************************************************************/
+
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Developer.Tooltip
 {
-    using UnityEngine;
-    using UnityEngine.UI;
-
-    [RequireComponent(typeof(ContentSizeFitter), typeof(Text))]
+    [RequireComponent(typeof(Text), typeof(ContentSizeFitter))]
     [AddComponentMenu("Developer/Tooltip/TooltipUI")]
     public class TooltipUI : MonoBehaviour
     {
@@ -38,36 +38,37 @@ namespace Developer.Tooltip
         public RectTransform bgRect;
 
         /// <summary>
-        /// ContentSizeFitter of tooltip UI root.
+        /// ContentSizeFitter of tooltip UI.
         /// </summary>
-        public ContentSizeFitter csFitter;
+        public ContentSizeFitter sizeFitter;
         #endregion
 
         #region Protected Method
         protected virtual void Reset()
         {
             textUI = GetComponent<Text>();
-            csFitter = GetComponent<ContentSizeFitter>();
+            sizeFitter = GetComponent<ContentSizeFitter>();
             bgRect = transform.GetChild(0).GetComponent<RectTransform>();
         }
 
         protected virtual void Update()
         {
-            SetPosition(Input.mousePosition);
+            transform.position = GetUIPosition(Input.mousePosition);
         }
 
         /// <summary>
-        /// Set tooltip UI screen position.
+        /// Get screen position of tooltip UI.
         /// </summary>
-        /// <param name="pointerPos">Mouse pointer screen position.</param>
-        protected virtual void SetPosition(Vector2 pointerPos)
+        /// <param name="pointerPos">Screen position of mouse pointer.</param>
+        /// <returns>Screen position of tooltip UI.</returns>
+        protected virtual Vector2 GetUIPosition(Vector2 pointerPos)
         {
             //Calculate position of tooltip UI.
             var halfWidth = bgRect.rect.width * 0.5f;
             var halfHeight = bgRect.rect.height * 0.5f;
             var newX = pointerPos.x < Screen.width - bgRect.rect.width ? pointerPos.x + halfWidth : Screen.width - halfWidth;
             var newY = pointerPos.y < Screen.height - bgRect.rect.height ? pointerPos.y + halfHeight : Screen.height - halfHeight;
-            transform.position = new Vector2(newX, newY);
+            return new Vector2(newX, newY);
         }
         #endregion
 
@@ -80,8 +81,8 @@ namespace Developer.Tooltip
         {
             textUI.text = text;
             gameObject.SetActive(true);
-            csFitter.SetLayoutHorizontal();
-            csFitter.SetLayoutVertical();
+            sizeFitter.SetLayoutHorizontal();
+            sizeFitter.SetLayoutVertical();
         }
 
         /// <summary>
