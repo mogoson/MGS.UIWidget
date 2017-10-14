@@ -15,7 +15,6 @@
 --------------------------------------------------------------------------
   [Achieve]
     TooltipUI：Control the Tooltip UI.
-
     TooltipTrigger：Trigger the Tooltip UI.
 --------------------------------------------------------------------------
   [Usage]
@@ -29,7 +28,6 @@
 --------------------------------------------------------------------------
   [Demo]
     Prefabs in the path "MGS-Tooltip/Prefabs" provide reference to you.
-
     Demos in the path "MGS-Tooltip/Scenes" provide reference to you.
 --------------------------------------------------------------------------
   [Resource]
