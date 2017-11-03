@@ -27,7 +27,7 @@
 ## 图示
 - SphereTooltip
 
-![SphereTooltip](./Attachments/SphereTooltip.png)
+![SphereTooltip](./Attachments/Tooltip.gif)
 
 ## 联系
 - 如果你有任何问题或者建议，欢迎通过mogoson@qq.com联系我。
