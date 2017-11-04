@@ -25,9 +25,9 @@
 - “MGS-Tooltip/Scenes”目录下存有上述功能的演示案例，供读者参考。
 
 ## 图示
-- SphereTooltip
+- Tooltip
 
-![SphereTooltip](./Attachments/Tooltip.gif)
+![Tooltip](./Attachments/Tooltip.gif)
 
 ## 联系
 - 如果你有任何问题或者建议，欢迎通过mogoson@qq.com联系我。
