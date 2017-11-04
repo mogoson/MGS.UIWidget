@@ -25,9 +25,9 @@
 - Demos in the path "MGS-Tooltip/Scenes" provide reference to you.
 
 ## Preview
-- SphereTooltip
+- Tooltip
 
-![SphereTooltip](./Attachments/Tooltip.gif)
+![Tooltip](./Attachments/Tooltip.gif)
 
 ## Contact
 - If you have any questions, feel free to contact me at mogoson@qq.com.
