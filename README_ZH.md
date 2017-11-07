@@ -24,10 +24,10 @@
 - “MGS-Tooltip/Prefabs”目录下存有上述提示UI的预制，供读者参考。
 - “MGS-Tooltip/Scenes”目录下存有上述功能的演示案例，供读者参考。
 
-## 图示
+## 预览
 - Tooltip
 
-![Tooltip](./Attachments/Tooltip.gif)
+![Tooltip](./Attachments/README_Image/Tooltip.gif)
 
 ## 联系
 - 如果你有任何问题或者建议，欢迎通过mogoson@qq.com联系我。

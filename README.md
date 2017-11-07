@@ -27,7 +27,7 @@
 ## Preview
 - Tooltip
 
-![Tooltip](./Attachments/Tooltip.gif)
+![Tooltip](./Attachments/README_Image/Tooltip.gif)
 
 ## Contact
 - If you have any questions, feel free to contact me at mogoson@qq.com.
