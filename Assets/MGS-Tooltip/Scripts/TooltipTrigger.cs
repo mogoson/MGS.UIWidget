@@ -14,8 +14,8 @@ using UnityEngine;
 
 namespace Developer.Tooltip
 {
-    [RequireComponent(typeof(Collider))]
     [AddComponentMenu("Developer/Tooltip/TooltipTrigger")]
+    [RequireComponent(typeof(Collider))]
     public class TooltipTrigger : MonoBehaviour
     {
         #region Property and Field

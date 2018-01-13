@@ -15,8 +15,8 @@ using UnityEngine.UI;
 
 namespace Developer.Tooltip
 {
-    [RequireComponent(typeof(Text), typeof(ContentSizeFitter))]
     [AddComponentMenu("Developer/Tooltip/TooltipUI")]
+    [RequireComponent(typeof(Text), typeof(ContentSizeFitter))]
     public class TooltipUI : MonoBehaviour
     {
         #region Property and Field
@@ -40,8 +40,11 @@ namespace Developer.Tooltip
         protected virtual void Reset()
         {
             textUI = GetComponent<Text>();
+            if (transform.childCount > 0)
+                bgRect = transform.GetChild(0).GetComponent<RectTransform>();
+
             sizeFitter = GetComponent<ContentSizeFitter>();
-            bgRect = transform.GetChild(0).GetComponent<RectTransform>();
+            sizeFitter.horizontalFit = sizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
         }
 
         protected virtual void Update()
