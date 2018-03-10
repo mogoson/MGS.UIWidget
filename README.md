@@ -17,8 +17,10 @@
 - Write UI trigger code, control UI Show/Close.
 
 ## Achieve
-- TooltipUI：Control the Tooltip UI.
-- TooltipTrigger：Trigger the Tooltip UI.
+- Tooltip : Define tooltip.
+- TooltipUI ：Implement the Tooltip in the way of UI.
+- TooltipAgent : Agent of Tooltip.
+- TooltipTrigger ：Trigger for Tooltip.
 
 ## Demo
 - Prefabs in the path "MGS-Tooltip/Prefabs" provide reference to you.

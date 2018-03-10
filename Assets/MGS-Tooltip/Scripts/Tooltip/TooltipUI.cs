@@ -1,13 +1,18 @@
-/*************************************************************************
- *  Copyright (C), 2017-2018, Mogoson Tech. Co., Ltd.
+﻿/*************************************************************************
+ *  Copyright © 2017-2018 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
  *  File         :  TooltipUI.cs
- *  Description  :  Control tooltip UI.
+ *  Description  :  Define tooltip UI.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
  *  Version      :  0.1.0
  *  Date         :  6/13/2017
  *  Description  :  Initial development version.
+ *  
+ *  Author       :  Mogoson
+ *  Version      :  0.1.1
+ *  Date         :  3/8/2018
+ *  Description  :  Extend and optimize.
  *************************************************************************/
 
 using UnityEngine;
@@ -17,34 +22,34 @@ namespace Developer.Tooltip
 {
     [AddComponentMenu("Developer/Tooltip/TooltipUI")]
     [RequireComponent(typeof(Text), typeof(ContentSizeFitter))]
-    public class TooltipUI : MonoBehaviour
+    public class TooltipUI : Tooltip
     {
-        #region Property and Field
+        #region Field and Property
         /// <summary>
         /// Text UI to display tooltip.
         /// </summary>
         public Text textUI;
 
         /// <summary>
-        /// Background RectTransform of tooltip UI.
-        /// </summary>
-        public RectTransform bgRect;
-
-        /// <summary>
         /// ContentSizeFitter of tooltip UI.
         /// </summary>
         public ContentSizeFitter sizeFitter;
+
+        /// <summary>
+        /// Background RectTransform of tooltip UI.
+        /// </summary>
+        public RectTransform background;
         #endregion
 
         #region Protected Method
         protected virtual void Reset()
         {
             textUI = GetComponent<Text>();
-            if (transform.childCount > 0)
-                bgRect = transform.GetChild(0).GetComponent<RectTransform>();
-
             sizeFitter = GetComponent<ContentSizeFitter>();
             sizeFitter.horizontalFit = sizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+
+            if (transform.childCount > 0)
+                background = transform.GetChild(0).GetComponent<RectTransform>();
         }
 
         protected virtual void Update()
@@ -60,10 +65,10 @@ namespace Developer.Tooltip
         protected virtual Vector2 GetUIPosition(Vector2 pointerPos)
         {
             //Calculate position of tooltip UI.
-            var halfWidth = bgRect.rect.width * 0.5f;
-            var halfHeight = bgRect.rect.height * 0.5f;
-            var newX = pointerPos.x < Screen.width - bgRect.rect.width ? pointerPos.x + halfWidth : Screen.width - halfWidth;
-            var newY = pointerPos.y < Screen.height - bgRect.rect.height ? pointerPos.y + halfHeight : Screen.height - halfHeight;
+            var halfWidth = background.rect.width * 0.5f;
+            var halfHeight = background.rect.height * 0.5f;
+            var newX = pointerPos.x < Screen.width - background.rect.width ? pointerPos.x + halfWidth : Screen.width - halfWidth;
+            var newY = pointerPos.y < Screen.height - background.rect.height ? pointerPos.y + halfHeight : Screen.height - halfHeight;
             return new Vector2(newX, newY);
         }
         #endregion
@@ -73,7 +78,7 @@ namespace Developer.Tooltip
         /// Show tooltip UI.
         /// </summary>
         /// <param name="text">Tooltip text.</param>
-        public virtual void Show(string text)
+        public override void Show(string text)
         {
             textUI.text = text;
             gameObject.SetActive(true);
@@ -84,7 +89,7 @@ namespace Developer.Tooltip
         /// <summary>
         /// Close tooltip UI.
         /// </summary>
-        public virtual void Close()
+        public override void Close()
         {
             gameObject.SetActive(false);
         }

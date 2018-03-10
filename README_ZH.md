@@ -17,8 +17,10 @@
 - 编写提示UI触发器脚本，触发显示/关闭。
 
 ## 实现
-- TooltipUI：控制提示UI。
-- TooltipTrigger：触发提示UI。
+- Tooltip：抽象定义Tooltip。
+- TooltipUI ：NGUI具体实现Tooltip。
+- TooltipAgent : Tooltip代理，提供全局的单例访问。
+- TooltipTrigger ：Tooltip触发器，鼠标指针触发Tooltip的显示/关闭。
 
 ## 案例
 - “MGS-Tooltip/Prefabs”目录下存有上述提示UI的预制，供读者参考。
