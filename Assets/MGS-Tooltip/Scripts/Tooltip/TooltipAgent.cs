@@ -10,12 +10,15 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
-using Developer.Singleton;
+using Mogoson.Singleton;
 using UnityEngine;
 
-namespace Developer.Tooltip
+namespace Mogoson.Tooltip
 {
-    [AddComponentMenu("Developer/Tooltip/TooltipAgent")]
+    /// <summary>
+    /// Agent of tooltip.
+    /// </summary>
+    [AddComponentMenu("Mogoson/Tooltip/TooltipAgent")]
     public sealed class TooltipAgent : SingleMonoBehaviour<TooltipAgent>
     {
         #region Field and Property
@@ -26,11 +29,18 @@ namespace Developer.Tooltip
         #endregion
 
         #region Public Method
+        /// <summary>
+        /// Show tooltip.
+        /// </summary>
+        /// <param name="tipInfo">Info show in tooltip.</param>
         public void ShowTip(string tipInfo)
         {
             tooltip.Show(tipInfo);
         }
 
+        /// <summary>
+        /// Close tooltip.
+        /// </summary>
         public void CloseTip()
         {
             tooltip.Close();

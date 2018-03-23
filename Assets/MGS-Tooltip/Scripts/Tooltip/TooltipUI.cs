@@ -18,9 +18,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Developer.Tooltip
+namespace Mogoson.Tooltip
 {
-    [AddComponentMenu("Developer/Tooltip/TooltipUI")]
+    /// <summary>
+    /// Tooltip UI(UGUI).
+    /// </summary>
+    [AddComponentMenu("Mogoson/Tooltip/TooltipUI")]
     [RequireComponent(typeof(Text), typeof(ContentSizeFitter))]
     public class TooltipUI : Tooltip
     {

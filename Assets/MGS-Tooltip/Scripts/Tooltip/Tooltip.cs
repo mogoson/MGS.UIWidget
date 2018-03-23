@@ -12,7 +12,7 @@
 
 using UnityEngine;
 
-namespace Developer.Tooltip
+namespace Mogoson.Tooltip
 {
     /// <summary>
     /// Tooltip component.

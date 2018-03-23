@@ -12,7 +12,7 @@
 
 using UnityEngine;
 
-namespace Developer.Singleton
+namespace Mogoson.Singleton
 {
     /// <summary>
     /// MonoBehaviour with a single instance.
@@ -76,7 +76,6 @@ namespace Developer.Singleton
                     return;
                 }
             }
-
             SingleAwake();
         }
 

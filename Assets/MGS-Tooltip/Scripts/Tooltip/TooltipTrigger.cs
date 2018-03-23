@@ -17,9 +17,12 @@
 
 using UnityEngine;
 
-namespace Developer.Tooltip
+namespace Mogoson.Tooltip
 {
-    [AddComponentMenu("Developer/Tooltip/TooltipTrigger")]
+    /// <summary>
+    /// Trigger for tooltip.
+    /// </summary>
+    [AddComponentMenu("Mogoson/Tooltip/TooltipTrigger")]
     [RequireComponent(typeof(Collider))]
     public class TooltipTrigger : MonoBehaviour
     {
