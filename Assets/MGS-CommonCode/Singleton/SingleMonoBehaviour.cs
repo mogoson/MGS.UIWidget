@@ -12,7 +12,7 @@
 
 using UnityEngine;
 
-namespace Mogoson.Singleton
+namespace Mogoson.DesignPattern
 {
     /// <summary>
     /// MonoBehaviour with a single instance.

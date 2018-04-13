@@ -10,7 +10,7 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
-using Mogoson.Singleton;
+using Mogoson.DesignPattern;
 using UnityEngine;
 
 namespace Mogoson.Tooltip
