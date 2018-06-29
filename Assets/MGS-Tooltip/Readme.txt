@@ -1,7 +1,7 @@
 ﻿==========================================================================
   Copyright © 2017-2018 Mogoson. All rights reserved.
   Name: MGS-Tooltip
-  Author: Mogoson   Version: 0.1.1   Date: 3/8/2018
+  Author: Mogoson   Version: 0.1.2   Date: 6/29/2018
 ==========================================================================
   [Summary]
     Unity plugin for make Tooltip of gameobject in scene.
@@ -16,15 +16,15 @@
   [Achieve]
     Tooltip : Define tooltip.
     TooltipUI ：Implement the Tooltip in the way of UI.
-	  TooltipAgent : Agent of Tooltip.
+    TooltipAgent : Agent of Tooltip.
     TooltipTrigger ：Trigger for Tooltip.
 --------------------------------------------------------------------------
   [Usage]
     Use UGUI to make the Tooltip UI (reference the Prefab "TooltipUI").
-	  and attach the TooltipUI component to it.
+    and attach the TooltipUI component to it.
 
-	  Create a empty gameobject and attach the TooltipAgent component to it
-	  and set the Tooltip as the Tooltip UI.
+    Create a empty gameobject and attach the TooltipAgent component to it
+    and set the Tooltip as the Tooltip UI.
 
     Attach the TooltipTrigger to the gameobject that you want to show
     Tooltip on mouse pointer enter it and set the TipInfo.
