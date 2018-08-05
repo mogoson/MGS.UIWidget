@@ -6,3 +6,5 @@
 *.csproj
 *.unityproj
 *.sln
+/Assets/ScriptTemplateToolkit.meta
+/Assets/ScriptTemplateToolkit
