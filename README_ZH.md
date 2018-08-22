@@ -32,4 +32,4 @@
 ![Tooltip](./Attachments/README_Image/Tooltip.gif)
 
 ## 联系
-- 如果你有任何问题或者建议，欢迎通过mogoson@qq.com联系我。
+- 如果你有任何问题或者建议，欢迎通过mogoson@outlook.com联系我。
