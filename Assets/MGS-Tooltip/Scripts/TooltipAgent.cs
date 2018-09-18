@@ -19,7 +19,7 @@ namespace Mogoson.Tooltip
     /// Agent of tooltip.
     /// </summary>
     [AddComponentMenu("Mogoson/Tooltip/TooltipAgent")]
-    public sealed class TooltipAgent : SingleMonoBehaviour<TooltipAgent>
+    public sealed class TooltipAgent : SingleMonoBehaviour<TooltipAgent>, ITooltipAgent
     {
         #region Field and Property
         /// <summary>

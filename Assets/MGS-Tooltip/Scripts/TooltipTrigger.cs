@@ -24,14 +24,24 @@ namespace Mogoson.Tooltip
     /// </summary>
     [AddComponentMenu("Mogoson/Tooltip/TooltipTrigger")]
     [RequireComponent(typeof(Collider))]
-    public class TooltipTrigger : MonoBehaviour
+    public class TooltipTrigger : MonoBehaviour, ITooltipTrigger
     {
         #region Field and Property
         /// <summary>
         /// Tooltip info.
         /// </summary>
         [Multiline]
-        public string tipInfo = "Tooltip Info";
+        [SerializeField]
+        protected string tipInfo = "Tooltip Info";
+
+        /// <summary>
+        /// Tooltip info.
+        /// </summary>
+        public string TipInfo
+        {
+            set { tipInfo = value; }
+            get { return tipInfo; }
+        }
         #endregion
 
         #region Protected Method
