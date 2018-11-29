@@ -23,7 +23,7 @@
     Use UGUI to make the Tooltip UI (reference the Prefab "TooltipUI").
     and attach the TooltipUI component to it.
 
-    Create a empty gameobject and attach the TooltipAgent component to it
+    Attach the TooltipAgent component to the canvas root of Tooltip UI
     and set the Tooltip as the Tooltip UI.
 
     Attach the TooltipTrigger to the gameobject that you want to show

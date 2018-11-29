@@ -10,6 +10,7 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
+using Mogoson.IO;
 using UnityEngine;
 
 namespace Mogoson.DesignPattern
@@ -71,7 +72,7 @@ namespace Mogoson.DesignPattern
                 if (instance != this)
                 {
                     Destroy(this);
-                    Debug.LogWarningFormat("Destroy the redundant instance of {0} component form {1} : " +
+                    LogUtility.LogWarning("Destroy the redundant instance of {0} component form {1}: " +
                         "Multi instances of {0} component in a scene is violat singleton design.", typeof(T).Name, name);
                     return;
                 }
