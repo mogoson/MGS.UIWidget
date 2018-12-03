@@ -1,7 +1,7 @@
 ﻿==========================================================================
   Copyright © 2017-2018 Mogoson. All rights reserved.
   Name: MGS-Tooltip
-  Author: Mogoson   Version: 0.1.2   Date: 6/29/2018
+  Author: Mogoson   Version: 0.1.3   Date: 12/03/2018
 ==========================================================================
   [Summary]
     Unity plugin for make Tooltip of gameobject in scene.
