@@ -63,9 +63,10 @@ namespace Mogoson.DesignPattern
             if (instance == null)
             {
                 instance = this as T;
-
                 if (dontDestroyOnLoad)
+                {
                     DontDestroyOnLoad(gameObject);
+                }
             }
             else
             {

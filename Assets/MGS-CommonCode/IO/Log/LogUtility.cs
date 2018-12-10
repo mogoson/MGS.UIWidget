@@ -33,7 +33,9 @@ namespace Mogoson.IO
         public static void Log(string format, params object[] args)
         {
             if (Logger != null)
+            {
                 Logger.Log(format, args);
+            }
         }
 
         /// <summary>
@@ -44,7 +46,9 @@ namespace Mogoson.IO
         public static void LogError(string format, params object[] args)
         {
             if (Logger != null)
+            {
                 Logger.LogError(format, args);
+            }
         }
 
         /// <summary>
@@ -55,7 +59,9 @@ namespace Mogoson.IO
         public static void LogWarning(string format, params object[] args)
         {
             if (Logger != null)
+            {
                 Logger.LogWarning(format, args);
+            }
         }
         #endregion
     }

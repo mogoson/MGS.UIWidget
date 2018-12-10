@@ -52,7 +52,9 @@ namespace Mogoson.Tooltip
             sizeFitter.horizontalFit = sizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
 
             if (transform.childCount > 0)
+            {
                 background = transform.GetChild(0).GetComponent<RectTransform>();
+            }
         }
 
         protected virtual void Update()
