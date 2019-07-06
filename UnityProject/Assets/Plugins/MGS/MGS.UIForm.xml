@@ -1,0 +1,395 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MGS.UIForm</name>
+    </assembly>
+    <members>
+        <member name="T:MGS.UIForm.MonoUIForm">
+            <summary>
+            Custom UI form base.
+            </summary>
+        </member>
+        <member name="P:MGS.UIForm.MonoUIForm.ID">
+            <summary>
+            ID of form.
+            </summary>
+        </member>
+        <member name="P:MGS.UIForm.MonoUIForm.Name">
+            <summary>
+            Name of form.
+            </summary>
+        </member>
+        <member name="P:MGS.UIForm.MonoUIForm.Tittle">
+            <summary>
+            Tittle of form.
+            </summary>
+        </member>
+        <member name="M:MGS.UIForm.MonoUIForm.Initialize">
+            <summary>
+            Initialize form.
+            </summary>
+        </member>
+        <member name="T:MGS.UIForm.UIFormInfoAttribute">
+            <summary>
+            Custom attribute info for UIForm.
+            </summary>
+        </member>
+        <member name="P:MGS.UIForm.UIFormInfoAttribute.Pattern">
+            <summary>
+            Pattern of UIForm.
+            </summary>
+        </member>
+        <member name="P:MGS.UIForm.UIFormInfoAttribute.Layer">
+            <summary>
+            Layer of UIForm to display.
+            </summary>
+        </member>
+        <member name="M:MGS.UIForm.UIFormInfoAttribute.#ctor(MGS.UIForm.UIFromPattern,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="pattern">Pattern of UIForm.</param>
+            <param name="layer">Layer of UIForm to display.</param>
+        </member>
+        <member name="T:MGS.UIForm.UIFromPattern">
+            <summary>
+            Pattern of UIForm.
+            </summary>
+        </member>
+        <member name="F:MGS.UIForm.UIFromPattern.Single">
+            <summary>
+            UIForm can be created a single instance only.
+            </summary>
+        </member>
+        <member name="F:MGS.UIForm.UIFromPattern.Multiple">
+            <summary>
+            UIForm can be created multiple instances.
+            </summary>
+        </member>
+        <member name="T:MGS.UIForm.IUIForm">
+            <summary>
+            Interface of custom UI form.
+            </summary>
+        </member>
+        <member name="P:MGS.UIForm.IUIForm.ID">
+            <summary>
+            ID of form.
+            </summary>
+        </member>
+        <member name="P:MGS.UIForm.IUIForm.Name">
+            <summary>
+            Name of form.
+            </summary>
+        </member>
+        <member name="P:MGS.UIForm.IUIForm.Tittle">
+            <summary>
+            Tittle of form.
+            </summary>
+        </member>
+        <member name="T:MGS.UIForm.IUIFormManager">
+            <summary>
+            Interface of manager for custom UI form.
+            </summary>
+        </member>
+        <member name="P:MGS.UIForm.IUIFormManager.Layers">
+            <summary>
+            Layers for custom form.
+            </summary>
+        </member>
+        <member name="M:MGS.UIForm.IUIFormManager.OpenForm``1(System.Object)">
+            <summary>
+            Open form by specified form type.
+            </summary>
+            <typeparam name="T">Specified form type.</typeparam>
+            <param name="data">Data of form to show.</param>
+        </member>
+        <member name="M:MGS.UIForm.IUIFormManager.FindForm``1">
+            <summary>
+            Find form by specified type.
+            </summary>
+            <typeparam name="T">Specified form type.</typeparam>
+            <returns>Target form.</returns>
+        </member>
+        <member name="M:MGS.UIForm.IUIFormManager.FindForms">
+            <summary>
+            Find all forms.
+            </summary>
+            <returns>All forms.</returns>
+        </member>
+        <member name="M:MGS.UIForm.IUIFormManager.FindForms(System.String)">
+            <summary>
+            Find forms by layer.
+            </summary>
+            <param name="layer">Target layer.</param>
+            <returns>Target forms.</returns>
+        </member>
+        <member name="M:MGS.UIForm.IUIFormManager.FindForms(MGS.UIForm.IUIForm,MGS.UIForm.FilterOptions)">
+            <summary>
+            Find forms by filter options.
+            </summary>
+            <param name="form">Specified form.</param>
+            <param name="options">Options for filter forms.</param>
+            <returns>Target forms.</returns>
+        </member>
+        <member name="M:MGS.UIForm.IUIFormManager.FindForms``1">
+            <summary>
+            Find forms by specified type.
+            </summary>
+            <typeparam name="T">Specified form type.</typeparam>
+            <returns>Target forms.</returns>
+        </member>
+        <member name="M:MGS.UIForm.IUIFormManager.MirrorForms(MGS.UCommon.Generic.MirrorMode)">
+            <summary>
+            Mirror forms.
+            </summary>
+            <param name="mode">Mode of mirror.</param>
+        </member>
+        <member name="M:MGS.UIForm.IUIFormManager.MirrorForms(System.String,MGS.UCommon.Generic.MirrorMode)">
+            <summary>
+            Mirror forms.
+            </summary>
+            <param name="layer">Target layer.</param>
+            <param name="mode">Mode of mirror.</param>
+        </member>
+        <member name="M:MGS.UIForm.IUIFormManager.LanguageForms(System.String)">
+            <summary>
+            Set language of forms.
+            </summary>
+            <param name="language">Language name.</param>
+        </member>
+        <member name="M:MGS.UIForm.IUIFormManager.CloseForm(MGS.UIForm.IUIForm,System.Boolean)">
+            <summary>
+            Close form by specified form.
+            </summary>
+            <param name="form">Specified form instance.</param>
+            <param name="dispose">Dispose form on close?</param>
+        </member>
+        <member name="M:MGS.UIForm.IUIFormManager.CloseForm``1(System.Boolean)">
+            <summary>
+            Close form by specified form type.
+            </summary>
+            <typeparam name="T">Specified form type.</typeparam>
+            <param name="dispose">Dispose form on close?</param>
+        </member>
+        <member name="M:MGS.UIForm.IUIFormManager.CloseForms(System.Boolean)">
+            <summary>
+            Close all the forms.
+            </summary>
+            <param name="dispose">Dispose form on close?</param>
+        </member>
+        <member name="M:MGS.UIForm.IUIFormManager.CloseForms(System.String,System.Boolean)">
+            <summary>
+            Close forms by layer.
+            </summary>
+            <param name="layer">Target layer.</param>
+            <param name="dispose">Dispose form on close?</param>
+        </member>
+        <member name="M:MGS.UIForm.IUIFormManager.CloseForms(MGS.UIForm.IUIForm,MGS.UIForm.FilterOptions,System.Boolean)">
+            <summary>
+            Close forms by filter options.
+            </summary>
+            <param name="form">Specified form instance.</param>
+            <param name="options">Options for filter forms.</param>
+            <param name="dispose">Dispose form on close?</param>
+        </member>
+        <member name="M:MGS.UIForm.IUIFormManager.CloseForms(System.Collections.Generic.IEnumerable{MGS.UIForm.IUIForm},System.Boolean)">
+            <summary>
+            Close form by specified forms.
+            </summary>
+            <param name="forms">Specified form instances.</param>
+            <param name="dispose">Dispose form on close?</param>
+        </member>
+        <member name="M:MGS.UIForm.IUIFormManager.CloseForms``1(System.Boolean)">
+            <summary>
+            Close forms by specified form type.
+            </summary>
+            <typeparam name="T">Specified form type.</typeparam>
+            <param name="dispose">Dispose form on close?</param>
+        </member>
+        <member name="T:MGS.UIForm.FilterOptions">
+            <summary>
+            Options for filter forms.
+            </summary>
+        </member>
+        <member name="F:MGS.UIForm.FilterOptions.FrontForms">
+            <summary>
+            Forms those in front of the specified form.
+            </summary>
+        </member>
+        <member name="F:MGS.UIForm.FilterOptions.BackForms">
+            <summary>
+            Forms those in back of the specified form.
+            </summary>
+        </member>
+        <member name="T:MGS.UIForm.UIFormManager">
+            <summary>
+            Custom UI form manager.
+            </summary>
+        </member>
+        <member name="F:MGS.UIForm.UIFormManager.SETTINGS_PATH">
+            <summary>
+            Path of settings file under the Resources folder.
+            </summary>
+        </member>
+        <member name="F:MGS.UIForm.UIFormManager.PREFAB_PATH_FORMAT">
+            <summary>
+            Format of form prefab path under the Resources folder (param 0 is layer name of form, param 1 is class name of form).
+            </summary>
+        </member>
+        <member name="P:MGS.UIForm.UIFormManager.Layers">
+            <summary>
+            Layers for custom form.
+            </summary>
+        </member>
+        <member name="F:MGS.UIForm.UIFormManager.layerForms">
+            <summary>
+            Info of layers and forms.
+            </summary>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.SingleAwake">
+            <summary>
+            Awake manager.
+            </summary>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.OpenForm``1(System.Object)">
+            <summary>
+            Open form by specified form type.
+            </summary>
+            <typeparam name="T">Specified form type.</typeparam>
+            <param name="data">Data of form to show.</param>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.FindForm``1">
+            <summary>
+            Find form by specified type.
+            </summary>
+            <typeparam name="T">Specified form type.</typeparam>
+            <returns>Target form.</returns>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.FindForms">
+            <summary>
+            Find all forms.
+            </summary>
+            <returns>All forms.</returns>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.FindForms(System.String)">
+            <summary>
+            Find forms by layer.
+            </summary>
+            <param name="layer">Target layer.</param>
+            <returns>Target forms.</returns>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.FindForms(MGS.UIForm.IUIForm,MGS.UIForm.FilterOptions)">
+            <summary>
+            Find forms by filter options.
+            </summary>
+            <param name="form">Specified form.</param>
+            <param name="options">Options for filter forms.</param>
+            <returns>Target forms.</returns>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.FindForms``1">
+            <summary>
+            Find forms by specified type.
+            </summary>
+            <typeparam name="T">Specified form type.</typeparam>
+            <returns>Target forms.</returns>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.MirrorForms(MGS.UCommon.Generic.MirrorMode)">
+            <summary>
+            Mirror forms.
+            </summary>
+            <param name="mode">Mode of mirror.</param>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.MirrorForms(System.String,MGS.UCommon.Generic.MirrorMode)">
+            <summary>
+            Mirror forms.
+            </summary>
+            <param name="layer">Target layer.</param>
+            <param name="mode">Mode of mirror.</param>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.LanguageForms(System.String)">
+            <summary>
+            Set language of forms.
+            </summary>
+            <param name="language">Language name.</param>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.CloseForm(MGS.UIForm.IUIForm,System.Boolean)">
+            <summary>
+            Close form by specified form.
+            </summary>
+            <param name="form">Specified form instance.</param>
+            <param name="dispose">Dispose form on close?</param>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.CloseForm``1(System.Boolean)">
+            <summary>
+            Close form by specified form type.
+            </summary>
+            <typeparam name="T">Specified form type.</typeparam>
+            <param name="dispose">Dispose form on close?</param>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.CloseForms(System.Boolean)">
+            <summary>
+            Close all the forms.
+            </summary>
+            <param name="dispose">Dispose form on close?</param>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.CloseForms(System.String,System.Boolean)">
+            <summary>
+            Close forms by layer.
+            </summary>
+            <param name="layer">Target layer.</param>
+            <param name="dispose">Dispose form on close?</param>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.CloseForms(MGS.UIForm.IUIForm,MGS.UIForm.FilterOptions,System.Boolean)">
+            <summary>
+            Close forms by filter options.
+            </summary>
+            <param name="form">Specified form instance.</param>
+            <param name="options">Options for filter forms.</param>
+            <param name="dispose">Dispose form on close?</param>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.CloseForms(System.Collections.Generic.IEnumerable{MGS.UIForm.IUIForm},System.Boolean)">
+            <summary>
+            Close form by specified forms.
+            </summary>
+            <param name="forms">Specified form instances.</param>
+            <param name="dispose">Dispose form on close?</param>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.CloseForms``1(System.Boolean)">
+            <summary>
+            Close forms by specified form type.
+            </summary>
+            <typeparam name="T">Specified form type.</typeparam>
+            <param name="dispose">Dispose form on close?</param>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.ReadSettings">
+            <summary>
+            Read settings from local file.
+            </summary>
+            <returns>Settings of UI form.</returns>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.CreateLayerRoots(System.String[])">
+            <summary>
+            Create root for layers.
+            </summary>
+            <param name="layers">UI form layers.</param>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.GetFormInfo``1(``0)">
+            <summary>
+            Get the UIFormInfo attribute of specified form type.
+            </summary>
+            <typeparam name="T">Specified form type.</typeparam>
+            <param name="form">Specified form instance.</param>
+            <returns>The UIFormInfo attribute of specified form type.</returns>
+        </member>
+        <member name="T:MGS.UIForm.UIFormSettings">
+            <summary>
+            Settings for UI form.
+            </summary>
+        </member>
+        <member name="F:MGS.UIForm.UIFormSettings.layers">
+            <summary>
+            Layers for custom UI form.
+            </summary>
+        </member>
+    </members>
+</doc>
