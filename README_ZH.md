@@ -27,9 +27,13 @@
 - “MGS-Tooltip/Scenes”目录下存有上述功能的演示案例，供读者参考。
 
 ## 预览
-- Tooltip
+- Tooltip On Collider
 
-![Tooltip](./Attachments/README_Image/Tooltip.gif)
+![Tooltip On Collider](./Attachments/README_Image/TooltipOnCollider.gif)
+
+- Tooltip On UGUI
+
+![Tooltip On UGUI](./Attachments/README_Image/TooltipOnUGUI.gif)
 
 ## 联系
 - 如果你有任何问题或者建议，欢迎通过mogoson@outlook.com联系我。

@@ -27,9 +27,13 @@
 - Demos in the path "MGS-Tooltip/Scenes" provide reference to you.
 
 ## Preview
-- Tooltip
+- Tooltip On Collider
 
-![Tooltip](./Attachments/README_Image/Tooltip.gif)
+![Tooltip On Collider](./Attachments/README_Image/TooltipOnCollider.gif)
+
+- Tooltip On UGUI
+
+![Tooltip On UGUI](./Attachments/README_Image/TooltipOnUGUI.gif)
 
 ## Contact
 - If you have any questions, feel free to contact me at mogoson@outlook.com.

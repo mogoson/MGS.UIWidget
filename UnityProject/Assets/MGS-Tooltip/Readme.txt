@@ -1,36 +1,30 @@
 ﻿==========================================================================
   Copyright © 2017-2019 Mogoson. All rights reserved.
   Name: MGS-Tooltip
-  Author: Mogoson   Version: 0.1.3   Date: 12/03/2018
+  Author: Mogoson   Version: 1.0.0   Date: 7/8/2019
 ==========================================================================
   [Summary]
-    Unity plugin for make Tooltip of gameobject in scene.
+    Unity plugin for make Tooltip of gameobject or UGUI in scene.
 --------------------------------------------------------------------------
   [Demand]
-    Show Tooltip on mouse pointer enter the gameobject in Unity scene.
+    Show Tooltip on mouse pointer enter the gameobject or UGUI in Unity scene.
 --------------------------------------------------------------------------
   [Environment]
     Unity 5.0 or above.
-    .Net Framework 3.0 or above.
+    .Net Framework 3.5 or above.
 --------------------------------------------------------------------------
   [Achieve]
-    Tooltip : Define tooltip.
-    TooltipUI ：Implement the Tooltip in the way of UI.
-    TooltipAgent : Agent of Tooltip.
-    TooltipTrigger ：Trigger for Tooltip.
+    TooltipForm: .
+    TextTooltipForm: .
+    TooltipTrigger: .
+    TooltipTriggerOnCollider: .
+    TooltipTriggerOnUGUI: .
 --------------------------------------------------------------------------
   [Usage]
-    Use UGUI to make the Tooltip UI (reference the Prefab "TooltipUI").
-    and attach the TooltipUI component to it.
-
-    Attach the TooltipAgent component to the canvas root of Tooltip UI
-    and set the Tooltip as the Tooltip UI.
-
-    Attach the TooltipTrigger to the gameobject that you want to show
-    Tooltip on mouse pointer enter it and set the TipInfo.
+    
 --------------------------------------------------------------------------
   [Demo]
-    Prefabs in the path "MGS-Tooltip/Prefabs" provide reference to you.
+    Prefabs in the path "Resources/UIForm/Prefabs/Tooltip" provide reference to you.
     Demos in the path "MGS-Tooltip/Scenes" provide reference to you.
 --------------------------------------------------------------------------
   [Resource]
