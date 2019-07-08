@@ -29,11 +29,11 @@
 ## 预览
 - Tooltip On Collider
 
-![Tooltip On Collider](./Attachments/README_Image/TooltipOnCollider.gif)
+![Tooltip On Collider](./Attachment/README_Image/TooltipOnCollider.gif)
 
 - Tooltip On UGUI
 
-![Tooltip On UGUI](./Attachments/README_Image/TooltipOnUGUI.gif)
+![Tooltip On UGUI](./Attachment/README_Image/TooltipOnUGUI.gif)
 
 ## 联系
 - 如果你有任何问题或者建议，欢迎通过mogoson@outlook.com联系我。

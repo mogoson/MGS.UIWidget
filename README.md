@@ -29,11 +29,11 @@
 ## Preview
 - Tooltip On Collider
 
-![Tooltip On Collider](./Attachments/README_Image/TooltipOnCollider.gif)
+![Tooltip On Collider](./Attachment/README_Image/TooltipOnCollider.gif)
 
 - Tooltip On UGUI
 
-![Tooltip On UGUI](./Attachments/README_Image/TooltipOnUGUI.gif)
+![Tooltip On UGUI](./Attachment/README_Image/TooltipOnUGUI.gif)
 
 ## Contact
 - If you have any questions, feel free to contact me at mogoson@outlook.com.
