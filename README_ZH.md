@@ -9,21 +9,17 @@
 
 ## 环境
 - Unity 5.0 或更高版本。
-- .Net Framework 3.0 或更高版本。
-
-## 方案
-- UGUI制作提示UI，适应不同长度，格式的提示信息。
-- 编写UI控制脚本，负责更新显示文本，适应鼠标指针位置，适应屏幕边界。
-- 编写提示UI触发器脚本，触发显示/关闭。
+- .Net Framework 3.5 或更高版本。
 
 ## 实现
-- Tooltip：抽象定义Tooltip。
-- TooltipUI ：NGUI具体实现Tooltip。
-- TooltipAgent : Tooltip代理，提供全局的单例访问。
-- TooltipTrigger ：Tooltip触发器，鼠标指针触发Tooltip的显示/关闭。
+- TooltipForm: 工具提示窗体基类。
+- TextTooltipForm: 文本内容提示窗体。
+- TooltipTrigger: 工具提示窗体触发器。
+- TooltipTriggerOnCollider: 基于碰撞体的工具提示窗体触发器。
+- TooltipTriggerOnUGUI: 基于UGUI的工具提示窗体触发器。
 
 ## 案例
-- “MGS-Tooltip/Prefabs”目录下存有上述提示UI的预制，供读者参考。
+- “Resources/UIForm/Prefabs/Tooltip”目录下存有上述提示UI的预制，供读者参考。
 - “MGS-Tooltip/Scenes”目录下存有上述功能的演示案例，供读者参考。
 
 ## 预览

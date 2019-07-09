@@ -12,11 +12,11 @@
 - .Net Framework 3.5 or above.
 
 ## Achieve
-    TooltipForm: Base class for tooltip form.
-    TextTooltipForm: Tooltip form to show text content.
-    TooltipTrigger: Base class for tooltip trrigger.
-    TooltipTriggerOnCollider: Tooltip trrigger base on collider.
-    TooltipTriggerOnUGUI: Tooltip trrigger base on UGUI.
+- TooltipForm: Base class for tooltip form.
+- TextTooltipForm: Tooltip form to show text content.
+- TooltipTrigger: Base class for tooltip trrigger.
+- TooltipTriggerOnCollider: Tooltip trrigger base on collider.
+- TooltipTriggerOnUGUI: Tooltip trrigger base on UGUI.
 
 ## Demo
 - Prefabs in the path "Resources/UIForm/Prefabs/Tooltip" provide reference to you.
