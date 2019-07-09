@@ -2,28 +2,24 @@
 - [中文手册](./README_ZH.md)
 
 ## Summary
-- Unity plugin for make Tooltip of gameobject in scene.
+- Unity plugin for make Tooltip of gameobject or UGUI in scene.
 
 ## Demand
-- Show Tooltip on mouse pointer enter the gameobject in Unity scene.
+- Show Tooltip on mouse pointer enter the gameobject or UGUI in Unity scene.
 
 ## Environment
 - Unity 5.0 or above.
-- .Net Framework 3.0 or above.
-
-## Scheme
-- Use UGUI to make Tooltip UI.
-- Write UI control code, update UI text and adapt to the mouse pointer position and screen edge.
-- Write UI trigger code, control UI Show/Close.
+- .Net Framework 3.5 or above.
 
 ## Achieve
-- Tooltip : Define tooltip.
-- TooltipUI ：Implement the Tooltip in the way of UI.
-- TooltipAgent : Agent of Tooltip.
-- TooltipTrigger ：Trigger for Tooltip.
+    TooltipForm: Base class for tooltip form.
+    TextTooltipForm: Tooltip form to show text content.
+    TooltipTrigger: Base class for tooltip trrigger.
+    TooltipTriggerOnCollider: Tooltip trrigger base on collider.
+    TooltipTriggerOnUGUI: Tooltip trrigger base on UGUI.
 
 ## Demo
-- Prefabs in the path "MGS-Tooltip/Prefabs" provide reference to you.
+- Prefabs in the path "Resources/UIForm/Prefabs/Tooltip" provide reference to you.
 - Demos in the path "MGS-Tooltip/Scenes" provide reference to you.
 
 ## Preview
