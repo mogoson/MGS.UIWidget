@@ -16,7 +16,7 @@
         </member>
         <member name="F:MGS.Tooltip.TooltipForm.offset">
             <summary>
-            Offset for tip form to align to target position.
+            Offset for tip form to align to mouse pointer.
             </summary>
         </member>
         <member name="F:MGS.Tooltip.TooltipForm.alignment">
@@ -36,7 +36,7 @@
         </member>
         <member name="P:MGS.Tooltip.TooltipForm.Offset">
             <summary>
-            Offset for tip form to align to target position.
+            Offset for tip form to align to mouse pointer.
             </summary>
         </member>
         <member name="P:MGS.Tooltip.TooltipForm.Alignment">
@@ -54,6 +54,11 @@
             Tip update.
             </summary>
         </member>
+        <member name="M:MGS.Tooltip.TooltipForm.AlignFormToPointer">
+            <summary>
+            Align tip form to mouse pointer.
+            </summary>
+        </member>
         <member name="M:MGS.Tooltip.TooltipForm.SetFormPosition(UnityEngine.Vector2)">
             <summary>
             Set tip form position.
@@ -62,10 +67,16 @@
         </member>
         <member name="M:MGS.Tooltip.TooltipForm.GetPreferredPosition(UnityEngine.Vector2)">
             <summary>
-            Get preferred position of tip form base on screen position.
+            Get preferred position of tip form base on screen.
             </summary>
             <param name="screenPos">Target screen position of tip form.</param>
             <returns>Preferred position of tip form.</returns>
+        </member>
+        <member name="M:MGS.Tooltip.TooltipForm.Open(System.Object)">
+            <summary>
+            Open tip form.
+            </summary>
+            <param name="data">Data of tip form.</param>
         </member>
         <member name="T:MGS.Tooltip.TooltipTrigger">
             <summary>
@@ -99,7 +110,7 @@
         </member>
         <member name="P:MGS.Tooltip.ITooltipForm.Offset">
             <summary>
-            Offset for tip form to align to target position.
+            Offset for tip form to align to mouse pointer.
             </summary>
         </member>
         <member name="P:MGS.Tooltip.ITooltipForm.Alignment">
@@ -114,7 +125,22 @@
         </member>
         <member name="F:MGS.Tooltip.TextTooltipForm.tipContent">
             <summary>
-            Text component of tip content.
+            Text component for tip content.
+            </summary>
+        </member>
+        <member name="F:MGS.Tooltip.TextTooltipForm.tipMaxWidth">
+            <summary>
+            Max width of tip content.
+            </summary>
+        </member>
+        <member name="F:MGS.Tooltip.TextTooltipForm.tipLayout">
+            <summary>
+            LayoutElement component for tip content.
+            </summary>
+        </member>
+        <member name="M:MGS.Tooltip.TextTooltipForm.Reset">
+            <summary>
+            Reset tip form.
             </summary>
         </member>
         <member name="M:MGS.Tooltip.TextTooltipForm.SetTipContent(System.String)">
@@ -122,6 +148,11 @@
             Set content of tip form.
             </summary>
             <param name="content">Tip content.</param>
+        </member>
+        <member name="M:MGS.Tooltip.TextTooltipForm.Initialize">
+            <summary>
+            Initialize tip form.
+            </summary>
         </member>
         <member name="M:MGS.Tooltip.TextTooltipForm.Refresh(System.Object)">
             <summary>

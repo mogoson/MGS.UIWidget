@@ -10,7 +10,7 @@
     Show Tooltip on mouse pointer enter the gameobject or UGUI in Unity scene.
 --------------------------------------------------------------------------
   [Environment]
-    Unity 5.0 or above.
+    Unity 5.3 or above.
     .Net Framework 3.5 or above.
 --------------------------------------------------------------------------
   [Achieve]

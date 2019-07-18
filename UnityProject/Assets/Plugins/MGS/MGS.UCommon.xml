@@ -140,6 +140,146 @@
             Animation play like ping pong.
             </summary>
         </member>
+        <member name="T:MGS.UCommon.Generic.ColorBlendMode">
+            <summary>
+            Mode of color blend.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Normal">
+            <summary>
+            Normal-Normal Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Dissolve">
+            <summary>
+            Normal-Dissolve Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Darken">
+            <summary>
+            Darken-Darken Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Multiply">
+            <summary>
+            Darken-Multiply Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.ColorBurn">
+            <summary>
+            Darken-ColorBurn Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.LinearBurn">
+            <summary>
+            Darken-LinearBurn Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.DarkerColor">
+            <summary>
+            Darken-DarkerColor Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Lighten">
+            <summary>
+            Lighten-Lighten Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Screen">
+            <summary>
+            Lighten-Screen Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.ColorDodge">
+            <summary>
+            Lighten-ColorDodge Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.LinearDodge">
+            <summary>
+            Lighten-LinearDodge Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.LighterColor">
+            <summary>
+            Lighten-LighterColor Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Overlay">
+            <summary>
+            Contrast-Overlay Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.SoftLight">
+            <summary>
+            Contrast-SoftLight Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.HardLight">
+            <summary>
+            Contrast-HardLight Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.VividLight">
+            <summary>
+            Contrast-VividLight Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.LinearLight">
+            <summary>
+            Contrast-LinearLight Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.PinLight">
+            <summary>
+            Contrast-PinLight Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.HardMix">
+            <summary>
+            Contrast-HardMix Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Difference">
+            <summary>
+            Cancelation-Difference Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Exclusion">
+            <summary>
+            Cancelation-Exclusion Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Subtract">
+            <summary>
+            Cancelation-Subtract Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Divide">
+            <summary>
+            Cancelation-Divide Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Hue">
+            <summary>
+            Component-Hue Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Color">
+            <summary>
+            Component-Color Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Saturation">
+            <summary>
+            Component-Saturation Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Luminosity">
+            <summary>
+            Component-Luminosity Mode.
+            </summary>
+        </member>
         <member name="T:MGS.UCommon.Generic.GenericEvent">
             <summary>
             Generic event.
@@ -316,9 +456,9 @@
             Event on close UI.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.UI.MonoUI.rectTransform">
+        <member name="P:MGS.UCommon.UI.MonoUI.rectTransform">
             <summary>
-            RectTransform of UI.
+            RectTransform component of UI.
             </summary>
         </member>
         <member name="M:MGS.UCommon.UI.MonoUI.Awake">
@@ -1260,17 +1400,235 @@
             Remove MeshCollider from skin.
             </summary>
         </member>
-        <member name="T:MGS.UCommon.Utility.AnchorUtility">
+        <member name="T:MGS.UCommon.Utility.ColorBlendUtility">
             <summary>
-            Utility for anchor.
+            Utility for color blend.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Utility.AnchorUtility.ToVector(UnityEngine.TextAnchor)">
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.Blend(UnityEngine.Color,UnityEngine.Color,MGS.UCommon.Generic.ColorBlendMode)">
             <summary>
-            Convert TextAnchor to Vector2.
+            Blend color a and color b.
             </summary>
-            <param name="anchor">TextAnchor.</param>
-            <returns>Vector2.</returns>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <param name="mode">Mode of color blend.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.NormalBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            Normal mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.DissolveBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            Dissolve mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.DarkenBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            Darken mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.MultiplyBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            Multiply mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.ColorBurnBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            ColorBurn mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.LinearBurnBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            LinearBurn vblend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.DarkerColorBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            DarkerColor mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.LightenBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            Lighten mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.ScreenBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            Screen mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.ColorDodgeBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            ColorDodge mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.LinearDodgeBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            LinearDodge mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.LighterColorBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            LighterColor mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.OverlayBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            Overlay mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.SoftLightBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            SoftLight mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.HardLightBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            HardLight mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.VividLightBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            VividLight mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.LinearLightBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            LinearLight mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.PinLightBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            PinLight mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.HardMixBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            HardMix mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.DifferenceBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            Difference mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.ExclusionBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            Exclusion mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.SubtractBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            Subtract mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.DivideBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            Divide mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.HueBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            Hue mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.ColorBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            Component-Color mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.SaturationBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            Saturation mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
+        </member>
+        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.LuminosityBlend(UnityEngine.Color,UnityEngine.Color)">
+            <summary>
+            Luminosity mode blend color a and color b.
+            </summary>
+            <param name="a">Color a.</param>
+            <param name="b">Color b.</param>
+            <returns>Blended color.</returns>
         </member>
         <member name="T:MGS.UCommon.Utility.MeshUtility">
             <summary>
