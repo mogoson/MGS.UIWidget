@@ -65,12 +65,10 @@
             </summary>
             <param name="screenPos">Target screen position of tip form.</param>
         </member>
-        <member name="M:MGS.Tooltip.TooltipForm.GetPreferredPosition(UnityEngine.Vector2)">
+        <member name="M:MGS.Tooltip.TooltipForm.Initialize">
             <summary>
-            Get preferred position of tip form base on screen.
+            Initialize tip form.
             </summary>
-            <param name="screenPos">Target screen position of tip form.</param>
-            <returns>Preferred position of tip form.</returns>
         </member>
         <member name="M:MGS.Tooltip.TooltipForm.Open(System.Object)">
             <summary>

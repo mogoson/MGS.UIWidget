@@ -235,11 +235,12 @@
             Utility for directory.
             </summary>
         </member>
-        <member name="M:MGS.Common.IO.DirectoryUtility.RequirePath(System.String)">
+        <member name="M:MGS.Common.IO.DirectoryUtility.RequirePath(System.String,System.String@)">
             <summary>
             Require the directory path exist.
             </summary>
             <param name="path">Directory path.</param>
+            <param name="error">Error message.</param>
             <returns>Create directory path succeed?</returns>
         </member>
         <member name="T:MGS.Common.IO.FileUtility">
