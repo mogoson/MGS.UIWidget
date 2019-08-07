@@ -44,9 +44,9 @@
             Alignment for tip form to align to target position.
             </summary>
         </member>
-        <member name="M:MGS.Tooltip.TooltipForm.Reset">
+        <member name="M:MGS.Tooltip.TooltipForm.Initialize">
             <summary>
-            Reset tip form.
+            Initialize tip form.
             </summary>
         </member>
         <member name="M:MGS.Tooltip.TooltipForm.Update">
@@ -64,11 +64,6 @@
             Set tip form position.
             </summary>
             <param name="screenPos">Target screen position of tip form.</param>
-        </member>
-        <member name="M:MGS.Tooltip.TooltipForm.Initialize">
-            <summary>
-            Initialize tip form.
-            </summary>
         </member>
         <member name="M:MGS.Tooltip.TooltipForm.Open(System.Object)">
             <summary>
@@ -141,22 +136,23 @@
             Reset tip form.
             </summary>
         </member>
+        <member name="M:MGS.Tooltip.TextTooltipForm.Initialize">
+            <summary>
+            Initialize tip form.
+            </summary>
+        </member>
         <member name="M:MGS.Tooltip.TextTooltipForm.SetTipContent(System.String)">
             <summary>
             Set content of tip form.
             </summary>
             <param name="content">Tip content.</param>
         </member>
-        <member name="M:MGS.Tooltip.TextTooltipForm.Initialize">
-            <summary>
-            Initialize tip form.
-            </summary>
-        </member>
         <member name="M:MGS.Tooltip.TextTooltipForm.Refresh(System.Object)">
             <summary>
             Refresh tip form.
             </summary>
             <param name="data">Data of tip form, type is string or TextTooltipFormData.</param>
+            <returns>Succeed?</returns>
         </member>
         <member name="T:MGS.Tooltip.TextTooltipFormData">
             <summary>
