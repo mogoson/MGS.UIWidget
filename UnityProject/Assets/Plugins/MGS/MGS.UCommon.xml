@@ -282,72 +282,6 @@
             Component-Luminosity Mode.
             </summary>
         </member>
-        <member name="T:MGS.UCommon.Generic.GenericEvent">
-            <summary>
-            Generic event.
-            </summary>
-        </member>
-        <member name="F:MGS.UCommon.Generic.GenericEvent.callback">
-            <summary>
-            Event callback.
-            </summary>
-        </member>
-        <member name="M:MGS.UCommon.Generic.GenericEvent.AddListener(System.Action)">
-            <summary>
-            Add event listener.
-            </summary>
-            <param name="callback">Event callback.</param>
-        </member>
-        <member name="M:MGS.UCommon.Generic.GenericEvent.RemoveListener(System.Action)">
-            <summary>
-            Remove event listener.
-            </summary>
-            <param name="callback">Event callback.</param>
-        </member>
-        <member name="M:MGS.UCommon.Generic.GenericEvent.ClearListener">
-            <summary>
-            Clear event listener.
-            </summary>
-        </member>
-        <member name="M:MGS.UCommon.Generic.GenericEvent.Invoke">
-            <summary>
-            Invoke event.
-            </summary>
-        </member>
-        <member name="T:MGS.UCommon.Generic.GenericEvent`1">
-            <summary>
-            Generic event.
-            </summary>
-            <typeparam name="T">Specified type of event data.</typeparam>
-        </member>
-        <member name="F:MGS.UCommon.Generic.GenericEvent`1.callback">
-            <summary>
-            Event callback.
-            </summary>
-        </member>
-        <member name="M:MGS.UCommon.Generic.GenericEvent`1.AddListener(System.Action{`0})">
-            <summary>
-            Add event listener.
-            </summary>
-            <param name="callback">Event callback.</param>
-        </member>
-        <member name="M:MGS.UCommon.Generic.GenericEvent`1.RemoveListener(System.Action{`0})">
-            <summary>
-            Remove event listener.
-            </summary>
-            <param name="callback">Event callback.</param>
-        </member>
-        <member name="M:MGS.UCommon.Generic.GenericEvent`1.ClearListener">
-            <summary>
-            Clear event listener.
-            </summary>
-        </member>
-        <member name="M:MGS.UCommon.Generic.GenericEvent`1.Invoke(`0)">
-            <summary>
-            Invoke event.
-            </summary>
-            <param name="data">Data of event.</param>
-        </member>
         <member name="T:MGS.UCommon.Generic.MirrorMode">
             <summary>
             Mode of mirror.
@@ -1293,11 +1227,6 @@
             </summary>
             <typeparam name="T">Specified type.</typeparam>
         </member>
-        <member name="F:MGS.UCommon.DesignPattern.SingleMonoBehaviour`1.SyncRoot">
-            <summary>
-            Sync root of single behaviour.
-            </summary>
-        </member>
         <member name="P:MGS.UCommon.DesignPattern.SingleMonoBehaviour`1.Instance">
             <summary>
             Instance of this MonoBehaviour.
@@ -1730,56 +1659,6 @@
             <param name="to">End vector.</param>
             <param name="normal">Normal of plane to project.</param>
             <returns>Project angle of two vectors.</returns>
-        </member>
-        <member name="T:MGS.Common.Utility.MultilingualUtility">
-            <summary>
-            Utility for multilingualism.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Utility.MultilingualUtility.SEPARATOR">
-            <summary>
-            Separator of paragraph key and value.
-            </summary>
-        </member>
-        <member name="P:MGS.Common.Utility.MultilingualUtility.Current">
-            <summary>
-            Current language.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Utility.MultilingualUtility.languages">
-            <summary>
-            Languages content list.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Utility.MultilingualUtility.directory">
-            <summary>
-            The directory of multilingualism files.
-            </summary>
-        </member>
-        <member name="M:MGS.Common.Utility.MultilingualUtility.#ctor">
-            <summary>
-            Constructor.
-            </summary>
-        </member>
-        <member name="M:MGS.Common.Utility.MultilingualUtility.Initialize(System.String)">
-            <summary>
-            Initialize the directory of multilingualism files.
-            </summary>
-            <param name="directory">The directory of multilingualism files.</param>
-        </member>
-        <member name="M:MGS.Common.Utility.MultilingualUtility.SetLanguage(System.String)">
-            <summary>
-            Set language by name.
-            </summary>
-            <param name="name">Name of language (Config in the LanguageSettings).</param>
-            <returns>Set language succeed?</returns>
-        </member>
-        <member name="M:MGS.Common.Utility.MultilingualUtility.GetParagraph(System.String)">
-            <summary>
-            Get a paragraph text of key in language.
-            </summary>
-            <param name="key">Key of paragraph text.</param>
-            <returns>A paragraph text of key in language.</returns>
         </member>
     </members>
 </doc>
