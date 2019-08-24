@@ -1,5 +1,4 @@
 ﻿# MGS-Tooltip
-- [中文手册](./README_ZH.md)
 
 ## Summary
 - Unity plugin for make Tooltip of gameobject or UGUI in scene.
