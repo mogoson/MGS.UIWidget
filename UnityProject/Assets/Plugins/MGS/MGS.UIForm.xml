@@ -91,6 +91,21 @@
             Interface of manager for custom UI form.
             </summary>
         </member>
+        <member name="P:MGS.UIForm.IUIFormManager.Canvas">
+            <summary>
+            Canvas component.
+            </summary>
+        </member>
+        <member name="P:MGS.UIForm.IUIFormManager.CanvasScaler">
+            <summary>
+            CanvasScaler component.
+            </summary>
+        </member>
+        <member name="P:MGS.UIForm.IUIFormManager.GraphicRaycaster">
+            <summary>
+            GraphicRaycaster component.
+            </summary>
+        </member>
         <member name="P:MGS.UIForm.IUIFormManager.Layers">
             <summary>
             Layers for custom form.
@@ -236,6 +251,21 @@
             Format of form prefab path under the Resources folder (param 0 is layer name of form, param 1 is class name of form).
             </summary>
         </member>
+        <member name="P:MGS.UIForm.UIFormManager.Canvas">
+            <summary>
+            Canvas component.
+            </summary>
+        </member>
+        <member name="P:MGS.UIForm.UIFormManager.CanvasScaler">
+            <summary>
+            CanvasScaler component.
+            </summary>
+        </member>
+        <member name="P:MGS.UIForm.UIFormManager.GraphicRaycaster">
+            <summary>
+            GraphicRaycaster component.
+            </summary>
+        </member>
         <member name="P:MGS.UIForm.UIFormManager.Layers">
             <summary>
             Layers for custom form.
@@ -244,11 +274,6 @@
         <member name="F:MGS.UIForm.UIFormManager.layerForms">
             <summary>
             Info of layers and forms.
-            </summary>
-        </member>
-        <member name="M:MGS.UIForm.UIFormManager.SingleAwake">
-            <summary>
-            Awake manager.
             </summary>
         </member>
         <member name="M:MGS.UIForm.UIFormManager.OpenForm``1(System.Object)">
@@ -360,6 +385,11 @@
             </summary>
             <typeparam name="T">Specified form type.</typeparam>
             <param name="dispose">Dispose form on close?</param>
+        </member>
+        <member name="M:MGS.UIForm.UIFormManager.Awake">
+            <summary>
+            Awake manager.
+            </summary>
         </member>
         <member name="M:MGS.UIForm.UIFormManager.ReadSettings">
             <summary>

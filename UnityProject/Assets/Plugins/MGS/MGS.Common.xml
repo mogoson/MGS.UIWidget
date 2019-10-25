@@ -53,9 +53,8 @@
         </member>
         <member name="M:MGS.Common.Converter.ByteConverter.ToBoolean(System.Byte[],System.Int32,System.Int32)">
             <summary>
-            Byte array to Boolean array.
+            Convert byte array to boolean array.
             </summary>
-            <returns>Convert Boolean array.</returns>
             <param name="bytes">Bytes array.</param>
             <param name="start">Start index.</param>
             <param name="count">Convert Boolean count.</param>
@@ -63,9 +62,8 @@
         </member>
         <member name="M:MGS.Common.Converter.ByteConverter.ToInt16(System.Byte[],System.Int32,System.Int32)">
             <summary>
-            Byte array to Int16 array.
+            Convert byte array to Int16 array.
             </summary>
-            <returns>Convert Int16 array.</returns>
             <param name="bytes">Bytes array.</param>
             <param name="start">Start index.</param>
             <param name="count">Convert Int16 count.</param>
@@ -73,9 +71,8 @@
         </member>
         <member name="M:MGS.Common.Converter.ByteConverter.ToInt32(System.Byte[],System.Int32,System.Int32)">
             <summary>
-            Byte array to Int32 array.
+            Convert byte array to Int32 array.
             </summary>
-            <returns>Convert Int32 array.</returns>
             <param name="bytes">Bytes array.</param>
             <param name="start">Start index.</param>
             <param name="count">Convert Int32 count.</param>
@@ -83,9 +80,8 @@
         </member>
         <member name="M:MGS.Common.Converter.ByteConverter.ToInt64(System.Byte[],System.Int32,System.Int32)">
             <summary>
-            Byte array to Int64 array.
+            Convert byte array to Int64 array.
             </summary>
-            <returns>Convert Int64 array.</returns>
             <param name="bytes">Bytes array.</param>
             <param name="start">Start index.</param>
             <param name="count">Convert Int64 count.</param>
@@ -93,9 +89,8 @@
         </member>
         <member name="M:MGS.Common.Converter.ByteConverter.ToChar(System.Byte[],System.Int32,System.Int32)">
             <summary>
-            Byte array to Char array.
+            Convert byte array to char array.
             </summary>
-            <returns>Convert Char array.</returns>
             <param name="bytes">Bytes array.</param>
             <param name="start">Start index.</param>
             <param name="count">Convert Char count.</param>
@@ -103,9 +98,8 @@
         </member>
         <member name="M:MGS.Common.Converter.ByteConverter.ToSingle(System.Byte[],System.Int32,System.Int32)">
             <summary>
-            Byte array to Single array.
+            Convert byte array to single array.
             </summary>
-            <returns>Convert Single array.</returns>
             <param name="bytes">Bytes array.</param>
             <param name="start">Start index.</param>
             <param name="count">Convert Single count.</param>
@@ -113,9 +107,8 @@
         </member>
         <member name="M:MGS.Common.Converter.ByteConverter.ToDouble(System.Byte[],System.Int32,System.Int32)">
             <summary>
-            Byte array to Double array.
+            Convert byte array to double array.
             </summary>
-            <returns>Convert Double array.</returns>
             <param name="bytes">Bytes array.</param>
             <param name="start">Start index.</param>
             <param name="count">Convert Double count.</param>
@@ -128,7 +121,7 @@
         </member>
         <member name="M:MGS.Common.Converter.StructureConverter.FromByteArray``1(System.Byte[])">
             <summary>
-            Byte array to structure.
+            Convert byte array to structure.
             </summary>
             <typeparam name="T">Structure type.</typeparam>
             <param name="byteArray">Byte array.</param>
@@ -136,7 +129,7 @@
         </member>
         <member name="M:MGS.Common.Converter.StructureConverter.ToByteArray``1(``0)">
             <summary>
-            Structure to byte array.
+            Convert structure to byte array.
             </summary>
             <typeparam name="T">Structure type.</typeparam>
             <param name="structure">Structure.</param>
@@ -252,9 +245,9 @@
             </summary>
             <param name="callback">Event callback.</param>
         </member>
-        <member name="M:MGS.Common.Generic.GenericEvent.ClearListener">
+        <member name="M:MGS.Common.Generic.GenericEvent.RemoveListeners">
             <summary>
-            Clear event listener.
+            Remove all event listeners.
             </summary>
         </member>
         <member name="M:MGS.Common.Generic.GenericEvent.Invoke">
@@ -285,9 +278,9 @@
             </summary>
             <param name="callback">Event callback.</param>
         </member>
-        <member name="M:MGS.Common.Generic.GenericEvent`1.ClearListener">
+        <member name="M:MGS.Common.Generic.GenericEvent`1.RemoveListeners">
             <summary>
-            Clear event listener.
+            Remove all event listeners.
             </summary>
         </member>
         <member name="M:MGS.Common.Generic.GenericEvent`1.Invoke(`0)">
@@ -991,6 +984,24 @@
             </summary>
             <param name="source">Data source.</param>
             <returns>Smooth result.</returns>
+        </member>
+        <member name="T:MGS.Common.Utility.ExplorerUtility">
+            <summary>
+            Utility for windows explorer.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ExplorerUtility.EXPLORER">
+            <summary>
+            Explorer process name.
+            </summary>
+        </member>
+        <member name="M:MGS.Common.Utility.ExplorerUtility.Show(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Show target path(or file) in explorer.
+            </summary>
+            <param name="path">Target path(or file) to show.</param>
+            <param name="select">Select path?</param>
+            <param name="eMode">Show explorer mode?</param>
         </member>
         <member name="T:MGS.Common.Utility.MultilingualUtility">
             <summary>
