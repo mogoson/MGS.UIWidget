@@ -24,12 +24,5 @@ namespace MGS.Tooltip
             UIFormManager.Instance.OpenForm<TestTooltipForm>();
         }
         #endregion
-
-        #region Public Method
-        public override bool Refresh(object data)
-        {
-            return true;
-        }
-        #endregion
     }
 }

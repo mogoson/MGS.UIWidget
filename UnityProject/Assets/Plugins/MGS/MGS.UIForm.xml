@@ -9,6 +9,16 @@
             Custom UI form base.
             </summary>
         </member>
+        <member name="F:MGS.UIForm.MonoUIForm.margin">
+            <summary>
+            Margin of form base on parent.
+            </summary>
+        </member>
+        <member name="F:MGS.UIForm.MonoUIForm.alignment">
+            <summary>
+            Alignment of form to align to target position.
+            </summary>
+        </member>
         <member name="P:MGS.UIForm.MonoUIForm.ID">
             <summary>
             ID of form.
@@ -24,10 +34,26 @@
             Tittle of form.
             </summary>
         </member>
-        <member name="M:MGS.UIForm.MonoUIForm.Initialize">
+        <member name="P:MGS.UIForm.MonoUIForm.Margin">
             <summary>
-            Initialize form.
+            Margin of form base on parent.
             </summary>
+        </member>
+        <member name="P:MGS.UIForm.MonoUIForm.Alignment">
+            <summary>
+            Alignment of form to align to target position.
+            </summary>
+        </member>
+        <member name="M:MGS.UIForm.MonoUIForm.Awake">
+            <summary>
+            Awake UI component.
+            </summary>
+        </member>
+        <member name="M:MGS.UIForm.MonoUIForm.SetPosition(UnityEngine.Vector2)">
+            <summary>
+            Set form anchored position.
+            </summary>
+            <param name="anchoredPosition">Target anchored position of form.</param>
         </member>
         <member name="T:MGS.UIForm.UIFormInfoAttribute">
             <summary>
@@ -86,6 +112,22 @@
             Tittle of form.
             </summary>
         </member>
+        <member name="P:MGS.UIForm.IUIForm.Margin">
+            <summary>
+            Margin of form base on parent.
+            </summary>
+        </member>
+        <member name="P:MGS.UIForm.IUIForm.Alignment">
+            <summary>
+            Alignment of form to align to target position.
+            </summary>
+        </member>
+        <member name="M:MGS.UIForm.IUIForm.SetPosition(UnityEngine.Vector2)">
+            <summary>
+            Set form anchored position.
+            </summary>
+            <param name="anchoredPosition">Target anchored position of form.</param>
+        </member>
         <member name="T:MGS.UIForm.IUIFormManager">
             <summary>
             Interface of manager for custom UI form.
@@ -111,12 +153,11 @@
             Layers for custom form.
             </summary>
         </member>
-        <member name="M:MGS.UIForm.IUIFormManager.OpenForm``1(System.Object)">
+        <member name="M:MGS.UIForm.IUIFormManager.OpenForm``1">
             <summary>
             Open form by specified form type.
             </summary>
             <typeparam name="T">Specified form type.</typeparam>
-            <param name="data">Data of form to show.</param>
         </member>
         <member name="M:MGS.UIForm.IUIFormManager.FindForm``1">
             <summary>
@@ -276,12 +317,11 @@
             Info of layers and forms.
             </summary>
         </member>
-        <member name="M:MGS.UIForm.UIFormManager.OpenForm``1(System.Object)">
+        <member name="M:MGS.UIForm.UIFormManager.OpenForm``1">
             <summary>
             Open form by specified form type.
             </summary>
             <typeparam name="T">Specified form type.</typeparam>
-            <param name="data">Data of form to show.</param>
         </member>
         <member name="M:MGS.UIForm.UIFormManager.FindForm``1">
             <summary>

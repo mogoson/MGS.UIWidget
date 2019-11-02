@@ -34,28 +34,10 @@
             Animation is playing?
             </summary>
         </member>
-        <member name="M:MGS.UCommon.UAnimation.MonoAnimation.Awake">
-            <summary>
-            Awake animation.
-            </summary>
-        </member>
-        <member name="M:MGS.UCommon.UAnimation.MonoAnimation.Initialize">
-            <summary>
-            Initialize animation.
-            </summary>
-        </member>
-        <member name="M:MGS.UCommon.UAnimation.MonoAnimation.Play(System.Object)">
+        <member name="M:MGS.UCommon.UAnimation.MonoAnimation.Play">
             <summary>
             Play animation.
             </summary>
-            <param name="data">Animation data.</param>
-        </member>
-        <member name="M:MGS.UCommon.UAnimation.MonoAnimation.Refresh(System.Object)">
-            <summary>
-            Refresh animation.
-            </summary>
-            <param name="data">Animation data.</param>
-            <returns>Succeed?</returns>
         </member>
         <member name="M:MGS.UCommon.UAnimation.MonoAnimation.Pause">
             <summary>
@@ -93,18 +75,10 @@
             Animation is playing?
             </summary>
         </member>
-        <member name="M:MGS.UCommon.UAnimation.IAnimation.Play(System.Object)">
+        <member name="M:MGS.UCommon.UAnimation.IAnimation.Play">
             <summary>
             Play animation.
             </summary>
-            <param name="data">Animation data.</param>
-        </member>
-        <member name="M:MGS.UCommon.UAnimation.IAnimation.Refresh(System.Object)">
-            <summary>
-            Refresh animation.
-            </summary>
-            <param name="data">Animation data.</param>
-            <returns>Succeed?</returns>
         </member>
         <member name="M:MGS.UCommon.UAnimation.IAnimation.Pause">
             <summary>
@@ -564,9 +538,14 @@
             Base class for mono UI.
             </summary>
         </member>
-        <member name="P:MGS.UCommon.UI.MonoUI.rectTransform">
+        <member name="P:MGS.UCommon.UI.MonoUI.RectTrans">
             <summary>
             RectTransform component of UI.
+            </summary>
+        </member>
+        <member name="P:MGS.UCommon.UI.MonoUI.ParentTrans">
+            <summary>
+            RectTransform component of parent UI.
             </summary>
         </member>
         <member name="P:MGS.UCommon.UI.MonoUI.IsOpen">
@@ -591,12 +570,7 @@
         </member>
         <member name="M:MGS.UCommon.UI.MonoUI.Awake">
             <summary>
-            Awake UI.
-            </summary>
-        </member>
-        <member name="M:MGS.UCommon.UI.MonoUI.Initialize">
-            <summary>
-            Initialize UI.
+            Awake UI component.
             </summary>
         </member>
         <member name="M:MGS.UCommon.UI.MonoUI.OnDestroy">
@@ -604,18 +578,10 @@
             On destroy UI.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.UI.MonoUI.Open(System.Object)">
+        <member name="M:MGS.UCommon.UI.MonoUI.Open">
             <summary>
             Open UI.
             </summary>
-            <param name="data">Data for UI.</param>
-        </member>
-        <member name="M:MGS.UCommon.UI.MonoUI.Refresh(System.Object)">
-            <summary>
-            Refresh UI.
-            </summary>
-            <param name="data">Data for UI.</param>
-            <returns>Succeed?</returns>
         </member>
         <member name="M:MGS.UCommon.UI.MonoUI.Close(System.Boolean)">
             <summary>
@@ -655,9 +621,14 @@
             Interface for mono UI.
             </summary>
         </member>
-        <member name="P:MGS.UCommon.UI.IMonoUI.rectTransform">
+        <member name="P:MGS.UCommon.UI.IMonoUI.RectTrans">
             <summary>
             RectTransform component of UI.
+            </summary>
+        </member>
+        <member name="P:MGS.UCommon.UI.IMonoUI.ParentTrans">
+            <summary>
+            RectTransform component of parent UI.
             </summary>
         </member>
         <member name="P:MGS.UCommon.UI.IMonoUI.IsOpen">
@@ -680,18 +651,10 @@
             Event on close UI.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.UI.IMonoUI.Open(System.Object)">
+        <member name="M:MGS.UCommon.UI.IMonoUI.Open">
             <summary>
             Open UI.
             </summary>
-            <param name="data">Data for UI.</param>
-        </member>
-        <member name="M:MGS.UCommon.UI.IMonoUI.Refresh(System.Object)">
-            <summary>
-            Refresh UI.
-            </summary>
-            <param name="data">Data for UI.</param>
-            <returns>Succeed?</returns>
         </member>
         <member name="M:MGS.UCommon.UI.IMonoUI.Close(System.Boolean)">
             <summary>

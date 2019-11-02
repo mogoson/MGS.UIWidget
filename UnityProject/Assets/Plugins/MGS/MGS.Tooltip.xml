@@ -9,19 +9,9 @@
             Tooltip form.
             </summary>
         </member>
-        <member name="F:MGS.Tooltip.TooltipForm.margin">
-            <summary>
-            Margin of tip form base on screen.
-            </summary>
-        </member>
         <member name="F:MGS.Tooltip.TooltipForm.offset">
             <summary>
             Offset for tip form to align to mouse pointer.
-            </summary>
-        </member>
-        <member name="F:MGS.Tooltip.TooltipForm.alignment">
-            <summary>
-            Alignment for tip form to align to target position.
             </summary>
         </member>
         <member name="P:MGS.Tooltip.TooltipForm.AutoFollowPointer">
@@ -29,22 +19,12 @@
             Tip form auto follow mouse pointer?
             </summary>
         </member>
-        <member name="P:MGS.Tooltip.TooltipForm.Margin">
-            <summary>
-            Margin of tip form base on screen.
-            </summary>
-        </member>
         <member name="P:MGS.Tooltip.TooltipForm.Offset">
             <summary>
             Offset for tip form to align to mouse pointer.
             </summary>
         </member>
-        <member name="P:MGS.Tooltip.TooltipForm.Alignment">
-            <summary>
-            Alignment for tip form to align to target position.
-            </summary>
-        </member>
-        <member name="M:MGS.Tooltip.TooltipForm.Initialize">
+        <member name="M:MGS.Tooltip.TooltipForm.Awake">
             <summary>
             Initialize tip form.
             </summary>
@@ -58,18 +38,6 @@
             <summary>
             Align tip form to mouse pointer.
             </summary>
-        </member>
-        <member name="M:MGS.Tooltip.TooltipForm.SetFormPosition(UnityEngine.Vector2)">
-            <summary>
-            Set tip form position.
-            </summary>
-            <param name="screenPos">Target screen position of tip form.</param>
-        </member>
-        <member name="M:MGS.Tooltip.TooltipForm.Open(System.Object)">
-            <summary>
-            Open tip form.
-            </summary>
-            <param name="data">Data of tip form.</param>
         </member>
         <member name="T:MGS.Tooltip.TooltipTrigger">
             <summary>
@@ -96,19 +64,9 @@
             Tip form auto follow mouse pointer?
             </summary>
         </member>
-        <member name="P:MGS.Tooltip.ITooltipForm.Margin">
-            <summary>
-            Margin of tip form base on screen.
-            </summary>
-        </member>
         <member name="P:MGS.Tooltip.ITooltipForm.Offset">
             <summary>
             Offset for tip form to align to mouse pointer.
-            </summary>
-        </member>
-        <member name="P:MGS.Tooltip.ITooltipForm.Alignment">
-            <summary>
-            Alignment for tip form to align to target position.
             </summary>
         </member>
         <member name="T:MGS.Tooltip.TextTooltipForm">
@@ -136,7 +94,7 @@
             Reset tip form.
             </summary>
         </member>
-        <member name="M:MGS.Tooltip.TextTooltipForm.Initialize">
+        <member name="M:MGS.Tooltip.TextTooltipForm.Awake">
             <summary>
             Initialize tip form.
             </summary>
@@ -146,35 +104,6 @@
             Set content of tip form.
             </summary>
             <param name="content">Tip content.</param>
-        </member>
-        <member name="M:MGS.Tooltip.TextTooltipForm.Refresh(System.Object)">
-            <summary>
-            Refresh tip form.
-            </summary>
-            <param name="data">Data of tip form, type is string or TextTooltipFormData.</param>
-            <returns>Succeed?</returns>
-        </member>
-        <member name="T:MGS.Tooltip.TextTooltipFormData">
-            <summary>
-            Data of text tooltip form.
-            </summary>
-        </member>
-        <member name="F:MGS.Tooltip.TextTooltipFormData.tipContent">
-            <summary>
-            Tip content text.
-            </summary>
-        </member>
-        <member name="F:MGS.Tooltip.TextTooltipFormData.tipPosition">
-            <summary>
-            Screen position of tip form.
-            </summary>
-        </member>
-        <member name="M:MGS.Tooltip.TextTooltipFormData.#ctor(System.String,UnityEngine.Vector2)">
-            <summary>
-            Constructor.
-            </summary>
-            <param name="tipContent">Tip content text.</param>
-            <param name="tipPosition">Screen position of tip form.</param>
         </member>
         <member name="T:MGS.Tooltip.TooltipTriggerOnCollider">
             <summary>
