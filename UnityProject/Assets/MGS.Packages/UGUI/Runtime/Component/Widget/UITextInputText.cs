@@ -20,7 +20,7 @@ namespace MGS.UGUI
     /// <summary>
     /// UI Text-Input-Text.
     /// </summary>
-    public class UITextInputText : UIComponent
+    public class UITextInputText : UIField<UITextInputTextOptions>
     {
         /// <summary>
         /// 
@@ -102,12 +102,12 @@ namespace MGS.UGUI
         /// <summary>
         /// 
         /// </summary>
-        public Action<string> OnValueChangedEvent;
+        public event Action<string> OnValueChangedEvent;
 
         /// <summary>
         /// 
         /// </summary>
-        public Action<string> OnEndEditEvent;
+        public event Action<string> OnEndEditEvent;
 
         /// <summary>
         /// 
@@ -118,6 +118,11 @@ namespace MGS.UGUI
         /// 
         /// </summary>
         protected Func<string, string> beforeEndEdit;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected bool ignoreChange = false;
 
         /// <summary>
         /// 
@@ -134,40 +139,40 @@ namespace MGS.UGUI
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="value"></param>
+        /// <param name="default"></param>
         /// <param name="min"></param>
         /// <param name="max"></param>
-        public void InitForInteger(int value, int min, int max)
+        public void InitForIntegerNumber(int @default, int min, int max)
         {
             ContentType = InputField.ContentType.IntegerNumber;
             beforeEndEdit = (text) =>
             {
-                var number = 0;
-                if (int.TryParse(text, out number))
+                var result = 0;
+                if (int.TryParse(text, out result))
                 {
-                    if (number < min || number > max)
+                    if (result < min || result > max)
                     {
-                        number = Mathf.Clamp(number, min, max);
+                        result = Mathf.Clamp(result, min, max);
                     }
                 }
                 else
                 {
                     if (string.IsNullOrEmpty(text))
                     {
-                        number = value;
+                        result = @default;
                     }
                     else if (text.StartsWith("-"))
                     {
-                        number = min;
+                        result = min;
                     }
                     else
                     {
-                        number = max;
+                        result = max;
                     }
                 }
 
-                text = number.ToString();
-                Content = text;
+                text = result.ToString();
+                SetContent(text, true);
                 return text;
             };
         }
@@ -175,16 +180,65 @@ namespace MGS.UGUI
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="tittle"></param>
-        /// <param name="content"></param>
-        /// <param name="caption"></param>
-        /// <param name="stamp"></param>
-        public void Refresh(string tittle = null, string content = null, string caption = null, string stamp = null)
+        /// <param name="default"></param>
+        /// <param name="min"></param>
+        /// <param name="max"></param>
+        public void InitForDecimalNumber(float @default, float min, float max)
         {
-            Tittle = tittle;
+            ContentType = InputField.ContentType.DecimalNumber;
+            beforeEndEdit = (text) =>
+            {
+                var result = 0f;
+                if (float.TryParse(text, out result))
+                {
+                    if (result < min || result > max)
+                    {
+                        result = Mathf.Clamp(result, min, max);
+                    }
+                }
+                else
+                {
+                    if (string.IsNullOrEmpty(text))
+                    {
+                        result = @default;
+                    }
+                    else if (text.StartsWith("-"))
+                    {
+                        result = min;
+                    }
+                    else
+                    {
+                        result = max;
+                    }
+                }
+
+                text = result.ToString();
+                SetContent(text, true);
+                return text;
+            };
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="info"></param>
+        protected override void OnRefresh(UITextInputTextOptions info)
+        {
+            Tittle = info.tittle;
+            SetContent(info.content, true);
+            Caption = info.caption;
+            Stamp = info.stamp;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="content"></param>
+        /// <param name="ignoreChange"></param>
+        protected void SetContent(string content, bool ignoreChange)
+        {
+            this.ignoreChange = ignoreChange;
             Content = content;
-            Caption = caption;
-            Stamp = stamp;
         }
 
         /// <summary>
@@ -193,6 +247,12 @@ namespace MGS.UGUI
         /// <param name="value"></param>
         private void Input_OnValueChanged(string value)
         {
+            if (ignoreChange)
+            {
+                ignoreChange = false;
+                return;
+            }
+
             if (beforeValueChange != null)
             {
                 value = beforeValueChange.Invoke(value);
@@ -212,5 +272,29 @@ namespace MGS.UGUI
             }
             ActionUtility.Invoke(OnEndEditEvent, value);
         }
+    }
+
+    /// <summary>
+    /// Options for UITextInputText.
+    /// </summary>
+    [Serializable]
+    public struct UITextInputTextOptions
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        public string tittle;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string content;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string caption;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string stamp;
     }
 }

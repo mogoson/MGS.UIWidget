@@ -20,7 +20,7 @@ namespace MGS.UGUI
     /// <summary>
     /// UI Button-Collector.
     /// </summary>
-    public class UIButtonCollectors : UIField
+    public class UIButtonCollectors : UIComponent
     {
         /// <summary>
         /// Root of button items.

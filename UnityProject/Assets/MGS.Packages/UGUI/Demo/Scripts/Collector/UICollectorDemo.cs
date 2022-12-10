@@ -30,10 +30,6 @@ namespace MGS.UGUI.Demo
         public List<UIButtonOptions> btnOptions;
 
         [Space(5)]
-        public UICustomCollectorDemo customCollector;
-        public List<UICustomCellDemoOptions> cusOptions;
-
-        [Space(5)]
         public Button btnAppend;
         public Button btnRemove;
 
@@ -55,7 +51,6 @@ namespace MGS.UGUI.Demo
             txtOptions.Add(new UITextOptions { text = txtOptions[0].text });
             imgOptions.Add(new UIImageOptions { sprite = imgOptions[0].sprite });
             btnOptions.Add(new UIButtonOptions { text = btnOptions[0].text });
-            cusOptions.Add(new UICustomCellDemoOptions { color = cusOptions[0].color, message = cusOptions[0].message });
             RefreshCollectors();
         }
 
@@ -73,10 +68,6 @@ namespace MGS.UGUI.Demo
             {
                 btnOptions.RemoveAt(btnOptions.Count - 1);
             }
-            if (cusOptions.Count > 1)
-            {
-                cusOptions.RemoveAt(cusOptions.Count - 1);
-            }
             RefreshCollectors();
         }
 
@@ -90,7 +81,6 @@ namespace MGS.UGUI.Demo
             textCollector.Refresh(txtOptions);
             imageCollector.Refresh(imgOptions);
             buttonCollector.Refresh(btnOptions);
-            customCollector.Refresh(cusOptions);
         }
     }
 }

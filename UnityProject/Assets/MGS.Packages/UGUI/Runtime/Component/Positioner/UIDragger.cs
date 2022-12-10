@@ -15,7 +15,7 @@ namespace MGS.UGUI
     /// <summary>
     /// UI dragger.
     /// </summary>
-    public class UIDragger : UIComponent
+    public class UIDragger : UIPositioner
     {
 
     }
