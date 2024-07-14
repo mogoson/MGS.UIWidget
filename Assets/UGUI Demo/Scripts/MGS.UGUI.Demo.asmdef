@@ -1,0 +1,16 @@
+{
+    "name": "MGS.UGUI.Demo",
+    "rootNamespace": "",
+    "references": [
+        "MGS.UGUI"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
