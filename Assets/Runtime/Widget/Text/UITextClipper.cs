@@ -40,10 +40,8 @@ namespace MGS.UGUI
         /// <summary>
         /// Awake component.
         /// </summary>
-        protected override void Awake()
+        protected virtual void Awake()
         {
-            base.Awake();
-
             text = GetComponent<Text>();
             text.RegisterDirtyVerticesCallback(OnDirty);
 

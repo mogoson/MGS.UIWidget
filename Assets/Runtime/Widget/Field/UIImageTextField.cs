@@ -28,9 +28,8 @@ namespace MGS.UGUI
         public Image image;
         public Text text;
 
-        protected override void Reset()
+        protected virtual void Reset()
         {
-            base.Reset();
             image = GetComponentInChildren<Image>(true);
             text = GetComponentInChildren<Text>(true);
         }

@@ -41,9 +41,8 @@ namespace MGS.UGUI
         /// <summary>
         /// Reset component.
         /// </summary>
-        protected override void Reset()
+        protected virtual void Reset()
         {
-            base.Reset();
             image = GetComponentInChildren<Image>(true);
         }
 

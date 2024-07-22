@@ -153,9 +153,8 @@ namespace MGS.UGUI
         /// <summary>
         /// 
         /// </summary>
-        protected override void Awake()
+        protected virtual void Awake()
         {
-            base.Awake();
             BindingEvents();
         }
 

@@ -11,14 +11,13 @@
  *************************************************************************/
 
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace MGS.UGUI
 {
     /// <summary>
     /// UI component.
     /// </summary>
-    public abstract class UIComponent : UIBehaviour, IUIComponent
+    public abstract class UIComponent : MonoBehaviour, IUIComponent
     {
         /// <summary>
         /// The RectTransform attached to this GameObject.

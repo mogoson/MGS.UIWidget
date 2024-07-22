@@ -150,10 +150,8 @@ namespace MGS.UGUI
         /// <summary>
         /// 
         /// </summary>
-        protected override void Awake()
+        protected virtual void Awake()
         {
-            base.Awake();
-
             caption = input.GetComponentInChildren<Text>();
             input.onValueChanged.AddListener(Input_OnValueChanged);
             input.onEndEdit.AddListener(Input_OnEndEdit);

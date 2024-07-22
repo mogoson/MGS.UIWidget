@@ -40,9 +40,8 @@ namespace MGS.UGUI
         /// <summary>
         /// Reset component.
         /// </summary>
-        protected override void Reset()
+        protected virtual void Reset()
         {
-            base.Reset();
             text = GetComponentInChildren<Text>(true);
         }
 

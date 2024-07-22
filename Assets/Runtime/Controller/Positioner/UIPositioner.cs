@@ -27,9 +27,8 @@ namespace MGS.UGUI
         /// <summary>
         /// 
         /// </summary>
-        protected override void Awake()
+        protected virtual void Awake()
         {
-            base.Awake();
             var canvas = transform.root.GetComponentInChildren<Canvas>(true);
             if (canvas != null && canvas.renderMode != RenderMode.ScreenSpaceOverlay)
             {
