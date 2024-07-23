@@ -171,23 +171,23 @@ namespace MGS.UGUI
             btnClose.onClick.AddListener(() =>
             {
                 callback?.Invoke(UIDialogResult.Close);
-                Close();
+                ToggleActive(false);
             });
 
             btnYes.onClick.AddListener(() =>
             {
                 callback?.Invoke(UIDialogResult.Yes);
-                Close();
+                ToggleActive(false);
             });
             btnNo.onClick.AddListener(() =>
             {
                 callback?.Invoke(UIDialogResult.No);
-                Close();
+                ToggleActive(false);
             });
             btnCancel.onClick.AddListener(() =>
             {
                 callback?.Invoke(UIDialogResult.Cancel);
-                Close();
+                ToggleActive(false);
             });
         }
 
@@ -197,14 +197,6 @@ namespace MGS.UGUI
         public virtual void Minimize()
         {
             gameObject.SetActive(false);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public virtual void Close()
-        {
-            Destroy(gameObject);
         }
 
         /// <summary>

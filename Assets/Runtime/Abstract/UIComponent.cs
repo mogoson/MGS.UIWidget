@@ -34,12 +34,20 @@ namespace MGS.UGUI
         }
 
         /// <summary>
-        /// Toggle this Component active.
+        /// Toggle this Component enabled.
         /// </summary>
         /// <param name="isEnable"></param>
         public virtual void ToggleEnable(bool isEnable = true)
         {
             enabled = isEnable;
+        }
+
+        /// <summary>
+        /// Destroy gameObject.
+        /// </summary>
+        public virtual void Destroy()
+        {
+            Destroy(gameObject);
         }
     }
 }
