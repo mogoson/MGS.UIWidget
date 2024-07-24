@@ -28,26 +28,35 @@ namespace MGS.UGUI
         public TCell cell;
 
         /// <summary>
+        /// Append a cell of data.
+        /// </summary>
+        public virtual void Append(TData data)
+        {
+            var cell = CreateCell();
+            cell.Refresh(data);
+        }
+
+        /// <summary>
         /// On refresh UI.
         /// </summary>
-        /// <param name="infos">Datas to refresh collector.</param>
-        protected override void OnRefresh(ICollection<TData> infos)
+        /// <param name="datas">Datas to refresh collector.</param>
+        protected override void OnRefresh(ICollection<TData> datas)
         {
-            if (infos == null || infos.Count == 0)
+            if (datas == null || datas.Count == 0)
             {
                 RequireCells(0);
                 return;
             }
 
-            RequireCells(infos.Count);
+            RequireCells(datas.Count);
 
             //Agreement: the prefab is under the container.
             var index = 1;
-            foreach (var info in infos)
+            foreach (var data in datas)
             {
                 var cell = RTransform.GetChild(index).GetComponent<TCell>();
                 cell.gameObject.SetActive(true);
-                RefreshCell(cell, info);
+                cell.Refresh(data);
                 index++;
             }
         }
@@ -80,16 +89,6 @@ namespace MGS.UGUI
         protected virtual TCell CreateCell()
         {
             return Instantiate(cell, RTransform);
-        }
-
-        /// <summary>
-        /// Refresh cell by data.
-        /// </summary>
-        /// <param name="cell"></param>
-        /// <param name="data"></param>
-        protected virtual void RefreshCell(TCell cell, TData data)
-        {
-            cell.Refresh(data);
         }
 
         /// <summary>
