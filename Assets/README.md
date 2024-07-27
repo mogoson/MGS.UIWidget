@@ -1,9 +1,9 @@
 [TOC]
 
-# MGS.UGUI
+# MGS.UIWidget
 
 ## Summary
-- Unity plugin for GUI develop.
+- Unity plugin for UI widget develop.
 
 ## Environment
 - .Net Framework 3.5 or above.
@@ -15,37 +15,13 @@
 
 ## Demand
 
-- Made common UI widget.
-- Made common UI panel.
-
-## Implemented
-
-- UI Widget
-
-```C#
-public abstract class UIWidget : UIComponent { }
-public class ButtonCollector : UIWidget{}
-public class SearchSelector : UIWidget{}
-```
-
-- UI Panel
-
-```C#
-public abstract class UIPanel : UIComponent{}
-public class TextInputText : UIPanel{}
-```
+- UI develop.
 
 ## Usage
 
 1. Add the component to your game object.
 2. Set the parameters of the component.
 
-## Demo
-- Demos in the path "MGS.Packages/UGUI/Demo/" provide reference to you.
-
-## Source
-- https://github.com/mogoson/MGS.UGUI.
-
 ------
 
-Copyright © 2021 Mogoson.	mogoson@outlook.com
+Copyright © 2024 Mogoson.	mogoson@outlook.com

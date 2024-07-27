@@ -13,7 +13,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace MGS.UGUI
+namespace MGS.UIWidget
 {
     /// <summary>
     /// Extension UI transform.

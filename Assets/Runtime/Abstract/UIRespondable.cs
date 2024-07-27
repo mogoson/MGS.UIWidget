@@ -12,15 +12,15 @@
 
 using System;
 
-namespace MGS.UGUI
+namespace MGS.UIWidget
 {
-    public abstract class UIRespondable<T, K> : UIRefreshable<T>, IUIRespondable<T, K>
+    public abstract class UIRespondable<T> : UIRefreshable<T>, IUIRespondable<T>
     {
-        public event Action<K> OnChangedEvent;
+        public event Action<T> OnDirtyEvent;
 
-        protected void OnChanged(K data)
+        protected void OnDirty()
         {
-            OnChangedEvent?.Invoke(data);
+            OnDirtyEvent?.Invoke(Option);
         }
     }
 }

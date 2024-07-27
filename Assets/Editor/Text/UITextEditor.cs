@@ -13,7 +13,7 @@
 using UnityEditor;
 using UnityEditor.UI;
 
-namespace MGS.UGUI.Editors
+namespace MGS.UIWidget.Editors
 {
     [CustomEditor(typeof(UIText), true)]
     public class UITextEditor : TextEditor

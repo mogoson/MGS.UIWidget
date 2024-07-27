@@ -1,32 +1,39 @@
 ﻿/*************************************************************************
  *  Copyright © 2021 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  IUIRefreshable.cs
+ *  File         :  UIMirror.cs
  *  Description  :  Null.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
  *  Version      :  0.1.0
- *  Date         :  10/24/2021
+ *  Date         :  8/21/2021
  *  Description  :  Initial development version.
  *************************************************************************/
+
+using UnityEngine;
 
 namespace MGS.UIWidget
 {
     /// <summary>
-    /// Interface for UI refreshable.
+    /// UI mirror.
     /// </summary>
-    /// <typeparam name="T">Type of option to refresh UI.</typeparam>
-    public interface IUIRefreshable<T> : IUIWidget
+    public class UIMirror : UIWidget, IUIMirror
     {
-        /// <summary>
-        /// Option of UI.
-        /// </summary>
-        T Option { get; }
+        [SerializeField]
+        protected UIMirrorMode mode;
 
-        /// <summary>
-        /// Refresh UI.
-        /// </summary>
-        /// <param name="option">Option to refresh UI.</param>
-        void Refresh(T option);
+        public bool IsMirror { protected set; get; }
+
+        public void SetMirror()
+        {
+            RTransform.SetPosition(mode);
+            IsMirror = !IsMirror;
+        }
+
+        public void SetMirror(UIMirrorMode mode)
+        {
+            this.mode = mode;
+            SetMirror();
+        }
     }
 }

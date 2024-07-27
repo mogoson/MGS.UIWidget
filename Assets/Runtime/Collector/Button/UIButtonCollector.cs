@@ -1,32 +1,38 @@
 ﻿/*************************************************************************
  *  Copyright © 2021 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  IUIRefreshable.cs
+ *  File         :  UIButtonCollector.cs
  *  Description  :  Null.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
  *  Version      :  0.1.0
- *  Date         :  10/24/2021
+ *  Date         :  10/20/2021
  *  Description  :  Initial development version.
  *************************************************************************/
+
+using System;
 
 namespace MGS.UIWidget
 {
     /// <summary>
-    /// Interface for UI refreshable.
+    /// UI button collector.
     /// </summary>
-    /// <typeparam name="T">Type of option to refresh UI.</typeparam>
-    public interface IUIRefreshable<T> : IUIWidget
+    public class UIButtonCollector : UICollector<UIButtonCell, UIButtonOption>
     {
         /// <summary>
-        /// Option of UI.
+        /// On cell click event.
         /// </summary>
-        T Option { get; }
+        public event Action<UIButtonCell> OnCellClickEvent;
 
         /// <summary>
-        /// Refresh UI.
+        /// Create a new cell from prefab.
         /// </summary>
-        /// <param name="option">Option to refresh UI.</param>
-        void Refresh(T option);
+        /// <returns></returns>
+        public override UIButtonCell CreateCell()
+        {
+            var cell = base.CreateCell();
+            cell.OnClickEvent += OnCellClickEvent;
+            return cell;
+        }
     }
 }

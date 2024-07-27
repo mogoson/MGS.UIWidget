@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace MGS.UGUI
+namespace MGS.UIWidget
 {
     /// <summary>
     /// Represents a layout group that arranges its child elements in a tile pattern.
