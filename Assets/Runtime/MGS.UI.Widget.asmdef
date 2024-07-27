@@ -1,5 +1,5 @@
 {
-    "name": "MGS.UIWidget",
+    "name": "MGS.UI.Widget",
     "rootNamespace": "",
     "references": [
         "MGS.Common"

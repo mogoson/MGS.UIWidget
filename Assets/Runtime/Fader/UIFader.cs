@@ -14,7 +14,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace MGS.UIWidget
+namespace MGS.UI.Widget
 {
     /// <summary>
     /// UI fader.

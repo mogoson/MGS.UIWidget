@@ -14,7 +14,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace MGS.UIWidget
+namespace MGS.UI.Widget
 {
     /// <summary>
     /// UI Color Fader.

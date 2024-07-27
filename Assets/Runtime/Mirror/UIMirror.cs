@@ -12,7 +12,7 @@
 
 using UnityEngine;
 
-namespace MGS.UIWidget
+namespace MGS.UI.Widget
 {
     /// <summary>
     /// UI mirror.

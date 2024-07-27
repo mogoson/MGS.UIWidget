@@ -1,8 +1,8 @@
 {
-    "name": "MGS.UIWidget.Editor",
+    "name": "MGS.UI.Widget.Editor",
     "rootNamespace": "",
     "references": [
-        "MGS.UIWidget"
+        "MGS.UI.Widget"
     ],
     "includePlatforms": [
         "Editor"

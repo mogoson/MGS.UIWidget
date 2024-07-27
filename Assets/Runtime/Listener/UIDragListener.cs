@@ -13,7 +13,7 @@
 using System;
 using UnityEngine.EventSystems;
 
-namespace MGS.UIWidget
+namespace MGS.UI.Widget
 {
     /// <summary>
     ///Event Listener for drag.

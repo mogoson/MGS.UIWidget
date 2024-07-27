@@ -17,7 +17,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace MGS.UIWidget
+namespace MGS.UI.Widget
 {
     /// <summary>
     /// UI Input Search Select Field.

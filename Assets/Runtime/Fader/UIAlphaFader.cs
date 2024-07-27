@@ -13,7 +13,7 @@
 using System;
 using UnityEngine;
 
-namespace MGS.UIWidget
+namespace MGS.UI.Widget
 {
     /// <summary>
     /// UI alpha fader.

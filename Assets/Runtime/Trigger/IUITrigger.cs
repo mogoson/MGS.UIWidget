@@ -10,7 +10,7 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
-namespace MGS.UIWidget
+namespace MGS.UI.Widget
 {
     public interface IUITrigger : IUIWidget { }
 }

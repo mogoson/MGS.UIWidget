@@ -13,7 +13,7 @@
 using System;
 using UnityEngine.UI;
 
-namespace MGS.UIWidget
+namespace MGS.UI.Widget
 {
     [Serializable]
     public struct UITooltipOption

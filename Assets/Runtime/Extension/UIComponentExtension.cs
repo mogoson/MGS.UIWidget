@@ -13,7 +13,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace MGS.UIWidget
+namespace MGS.UI.Widget
 {
     /// <summary>
     /// Extension for UI component.

@@ -12,7 +12,7 @@
 
 using System;
 
-namespace MGS.UIWidget
+namespace MGS.UI.Widget
 {
     public abstract class UIRespondable<T> : UIRefreshable<T>, IUIRespondable<T>
     {

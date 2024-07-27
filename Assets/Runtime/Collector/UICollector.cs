@@ -12,7 +12,7 @@
 
 using System.Collections.Generic;
 
-namespace MGS.UIWidget
+namespace MGS.UI.Widget
 {
     /// <summary>
     /// UI collector.

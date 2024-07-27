@@ -12,7 +12,7 @@
 
 using System;
 
-namespace MGS.UIWidget
+namespace MGS.UI.Widget
 {
     /// <summary>
     /// UI button collector.
